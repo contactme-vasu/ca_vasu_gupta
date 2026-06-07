@@ -25,13 +25,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   document.querySelectorAll("th[data-sort]").forEach((th) => {
+    setHeaderWords(th, th.textContent);
     th.addEventListener("click", () => {
       const key = th.dataset.sort;
       if (state.sortKey === key) {
         state.sortDirection = state.sortDirection === "asc" ? "desc" : "asc";
       } else {
         state.sortKey = key;
-        state.sortDirection = key === "indexName" || key === "amcText" || key === "sourceUrl" ? "asc" : "desc";
+        state.sortDirection = key === "indexName" || key === "sourceUrl" ? "asc" : "desc";
       }
       render();
     });
@@ -62,7 +63,6 @@ function renderTabs() {
 function render() {
   const period = state.data.periods[state.periodIndex];
   const rows = sortedRows(filteredRows(period.rows));
-  renderSummary(period, rows);
   renderTable(period, rows);
   renderFooter();
 }
@@ -111,34 +111,17 @@ function sortedRows(rows) {
 }
 
 function sortValue(row, key) {
-  if (key === "amcText") return row.amcs.join(", ");
   return row[key];
-}
-
-function renderSummary(period, rows) {
-  const top = rows[0];
-  const summaryGrid = document.getElementById("summaryGrid");
-  summaryGrid.innerHTML = "";
-  const cards = [
-    ["Indices", numberFormat.format(rows.length)],
-    ["With AMCs", numberFormat.format(rows.filter((row) => row.amcs.length).length)],
-    ["Highest Observed CAGR", top && top.cagr !== null ? `${percentFormat.format(top.cagr)}%` : "-"],
-    ["Rolling Period", period.label],
-  ];
-
-  for (const [label, value] of cards) {
-    const div = document.createElement("div");
-    div.className = "summary-card";
-    div.innerHTML = `<span>${label}</span><strong>${value}</strong>`;
-    summaryGrid.appendChild(div);
-  }
 }
 
 function renderTable(period, rows) {
   const tbody = document.getElementById("rankingBody");
   tbody.innerHTML = "";
   document.getElementById("rowCount").textContent = `${rows.length} rows`;
-  document.getElementById("avgRollingHeader").textContent = `Average ${period.rollingYears} Year Rolling Return (%)`;
+  setHeaderWords(
+    document.getElementById("avgRollingHeader"),
+    `Average ${period.rollingYears} Year Rolling Return (%)`
+  );
 
   const fragment = document.createDocumentFragment();
   for (const row of rows) {
@@ -163,7 +146,6 @@ function renderTable(period, rows) {
       <td>${numberOrDash(row.topQuartileCount)}</td>
       <td>${numberOrDash(row.bottomQuartileCount)}</td>
       <td>${numberOrDash(row.topBottomRatio)}</td>
-      <td>${row.amcs.length ? escapeHtml(row.amcs.join(", ")) : '<span class="muted">none</span>'}</td>
       <td>${row.sourceUrl ? `<a class="source-link" href="${escapeHtml(row.sourceUrl)}" target="_blank" rel="noopener">Source</a>` : '<span class="muted">none</span>'}</td>
     `;
     fragment.appendChild(tr);
@@ -218,4 +200,13 @@ function escapeHtml(value) {
     '"': "&quot;",
     "'": "&#39;",
   }[char]));
+}
+
+function setHeaderWords(th, label) {
+  th.textContent = "";
+  for (const word of String(label).trim().split(/\s+/)) {
+    const span = document.createElement("span");
+    span.textContent = word;
+    th.appendChild(span);
+  }
 }

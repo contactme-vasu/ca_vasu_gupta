@@ -106,6 +106,8 @@ function renderTable(rows) {
 
 function renderFooter() {
   const date = new Date(state.data.generatedAt);
+  document.getElementById("handbookLabel").textContent = `IRDAI Handbook ${state.data.dataUpdatedThrough}`;
+  document.getElementById("sourceLabel").textContent = `CA Vasu Gupta. Source: ${state.data.source}. Company names are data references only.`;
   document.getElementById("updatedAt").textContent = `Updated ${date.toLocaleDateString("en-IN", {
     day: "2-digit",
     month: "short",

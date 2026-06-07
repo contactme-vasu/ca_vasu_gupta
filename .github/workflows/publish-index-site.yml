@@ -1,0 +1,33 @@
+﻿name: Publish Index Analysis
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 3 5 4,10 *"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Refresh data and build static site
+        run: python main.py
+
+      - name: Commit generated website files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update index analysis website"
+          file_pattern: cache/site_data.json index
+

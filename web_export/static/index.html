@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Index Funds Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="brand">
+        <img src="assets/ca-india-logo.png" alt="CA India logo">
+        <h1>Index Funds Analysis</h1>
+      </div>
+    </header>
+
+    <main>
+      <section class="toolbar" aria-label="Report controls">
+        <div class="tabs" id="periodTabs"></div>
+        <div class="metadata-grid" id="reportMeta"></div>
+        <label class="search-label">
+          <input id="searchInput" type="search" placeholder="Search index or AMC">
+        </label>
+        <label class="checkbox-label">
+          <input id="amcOnlyInput" type="checkbox">
+          <span>AMCs available</span>
+        </label>
+      </section>
+
+      <section class="metadata-panel" aria-label="Report metadata">
+        <div class="sources">
+          <h2>Sources</h2>
+          <ul id="sourceList"></ul>
+        </div>
+      </section>
+
+      <section class="summary-grid" id="summaryGrid"></section>
+
+      <section class="table-section">
+        <details class="column-guide">
+          <summary>Column guide</summary>
+          <dl>
+            <div>
+              <dt>CAGR</dt>
+              <dd>Compound annual growth rate: the average yearly return over the full available period, assuming gains are reinvested.</dd>
+            </div>
+            <div>
+              <dt>Std Dev</dt>
+              <dd>Standard deviation: a measure of how much returns moved up and down. Higher values usually mean a bumpier ride.</dd>
+            </div>
+            <div>
+              <dt>Max Drawdown</dt>
+              <dd>Maximum drawdown: the worst peak-to-trough fall in the TRI history.</dd>
+            </div>
+            <div>
+              <dt>Sharpe</dt>
+              <dd>Sharpe ratio: annualized average monthly excess return over monthly excess-return standard deviation, using 364-day T-Bill yields as the risk-free rate.</dd>
+            </div>
+            <div>
+              <dt>Sortino</dt>
+              <dd>Sortino ratio: annualized average monthly excess return over the standard deviation of negative monthly excess returns.</dd>
+            </div>
+            <div>
+              <dt>Avg Rolling</dt>
+              <dd>Average rolling return: the average of all rolling period returns, such as all 3-year or 5-year return windows.</dd>
+            </div>
+            <div>
+              <dt>Worst Rolling</dt>
+              <dd>Worst rolling return: the lowest return seen across the selected rolling windows.</dd>
+            </div>
+            <div>
+              <dt>Best Rolling</dt>
+              <dd>Best rolling return: the highest return seen across the selected rolling windows.</dd>
+            </div>
+            <div>
+              <dt>Rolling Std Dev</dt>
+              <dd>Standard deviation of rolling returns: a measure of how consistent the selected rolling-period returns were.</dd>
+            </div>
+            <div>
+              <dt>Top Q</dt>
+              <dd>Upper quartile count: how many rolling periods this index appeared in the upper 25 percent of the dataset.</dd>
+            </div>
+            <div>
+              <dt>Top/Bottom</dt>
+              <dd>Compares upper-quartile observations with lower-quartile observations.</dd>
+            </div>
+            <div>
+              <dt>Bottom Q</dt>
+              <dd>Lower quartile count: how many rolling periods this index appeared in the lower 25 percent of the dataset.</dd>
+            </div>
+            <div>
+              <dt>AMCs</dt>
+              <dd>Asset management companies that appear to offer index funds tracking this index.</dd>
+            </div>
+          </dl>
+        </details>
+        <div class="section-heading">
+          <h2>Analysis Table</h2>
+          <span id="rowCount"></span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th data-sort="indexName">Index Name</th>
+                <th data-sort="cagr">CAGR</th>
+                <th data-sort="stdDev">Std Dev</th>
+                <th data-sort="maxDrawdown">Max Drawdown</th>
+                <th data-sort="sharpeRatio">Sharpe</th>
+                <th data-sort="sortinoRatio">Sortino</th>
+                <th data-sort="yearsOfData">Years of Data</th>
+                <th data-sort="latest1YearReturn">Latest 1 Year Return</th>
+                <th data-sort="latest3YearReturn">Latest 3 Year Return</th>
+                <th data-sort="latest5YearReturn">Latest 5 Year Return</th>
+                <th data-sort="latest7YearReturn">Latest 7 Year Return</th>
+                <th data-sort="latest10YearReturn">Latest 10 Year Return</th>
+                <th id="avgRollingHeader" data-sort="averageRollingReturn">Average Rolling Return</th>
+                <th data-sort="worstRollingReturn">Worst Rolling</th>
+                <th data-sort="bestRollingReturn">Best Rolling</th>
+                <th data-sort="rollingReturnStdDev">Rolling Std Dev</th>
+                <th data-sort="topQuartileCount">Upper Q</th>
+                <th data-sort="bottomQuartileCount">Lower Q</th>
+                <th data-sort="topBottomRatio">Upper/Lower</th>
+                <th data-sort="amcText">AMCs</th>
+                <th data-sort="sourceUrl">Source</th>
+              </tr>
+            </thead>
+            <tbody id="rankingBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span id="updatedAt"></span>
+      <span>For information and discussion only. Data names are references, not clients, endorsements, or recommendations.</span>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>

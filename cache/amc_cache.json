@@ -1,0 +1,410 @@
+{
+  "timestamp": "2026-04-23T13:05:01.718730",
+  "amc_map": {
+    "nifty100": [
+      "Axis Mutual Fund",
+      "Bandhan Mutual Fund",
+      "HDFC Mutual Fund"
+    ],
+    "nifty50": [
+      "Aditya Birla Sun Life Mutual Fund",
+      "Axis Mutual Fund",
+      "Bandhan Mutual Fund",
+      "Baroda BNP Paribas Mutual Fund",
+      "DSP Mutual Fund",
+      "Edelweiss Mutual Fund",
+      "Franklin Templeton Mutual Fund",
+      "HDFC Mutual Fund",
+      "HSBC Mutual Fund",
+      "ICICI Prudential Mutual Fund",
+      "Kotak Mahindra Mutual Fund",
+      "LIC Mutual Fund",
+      "Mirae Asset Mutual Fund",
+      "Motilal Oswal Mutual Fund",
+      "Navi Mutual Fund",
+      "Nippon India Mutual Fund",
+      "SBI Mutual Fund",
+      "Tata Mutual Fund",
+      "Taurus Mutual Fund",
+      "UTI Mutual Fund"
+    ],
+    "niftyaaabondjun2025htm": [
+      "Kotak Mahindra Mutual Fund"
+    ],
+    "niftyaaacpsebondplussdlapr20276040": [
+      "Nippon India Mutual Fund"
+    ],
+    "niftysdlplusaaapsubondapr20287525": [
+      "UTI Mutual Fund"
+    ],
+    "niftyaaapsubondplussdlapr20265050": [
+      "Mirae Asset Mutual Fund"
+    ],
+    "niftyaaapsubondplussdlsep20265050": [
+      "Nippon India Mutual Fund"
+    ],
+    "niftyaaacpsebondplussdlsep20265050": [
+      "Nippon India Mutual Fund"
+    ],
+    "niftyalphalowvolatility30": [
+      "Bandhan Mutual Fund",
+      "Edelweiss Mutual Fund",
+      "Nippon India Mutual Fund",
+      "UTI Mutual Fund"
+    ],
+    "niftyauto": [
+      "ICICI Prudential Mutual Fund",
+      "Nippon India Mutual Fund",
+      "Tata Mutual Fund"
+    ],
+    "niftybank": [
+      "Axis Mutual Fund",
+      "Bandhan Mutual Fund",
+      "DSP Mutual Fund",
+      "ICICI Prudential Mutual Fund",
+      "Motilal Oswal Mutual Fund",
+      "Navi Mutual Fund",
+      "Nippon India Mutual Fund"
+    ],
+    "niftycapitalmarkets": [
+      "Motilal Oswal Mutual Fund",
+      "Tata Mutual Fund"
+    ],
+    "niftyfinancialservices": [
+      "Tata Mutual Fund"
+    ],
+    "niftyfinancialservicesexbank": [
+      "Kotak Mahindra Mutual Fund"
+    ],
+    "niftycpsebondplussdlsep20265050": [
+      "SBI Mutual Fund"
+    ],
+    "niftygsecdec2026": [
+      "HDFC Mutual Fund",
+      "Tata Mutual Fund"
+    ],
+    "niftygsecapr2029": [
+      "HDFC Mutual Fund"
+    ],
+    "niftygsecdec2029": [
+      "Tata Mutual Fund"
+    ],
+    "niftygsecdec2030": [
+      "ICICI Prudential Mutual Fund"
+    ],
+    "niftygsecjul2028": [
+      "Kotak Mahindra Mutual Fund"
+    ],
+    "niftygsecjul2031": [
+      "HDFC Mutual Fund"
+    ],
+    "niftygsecjul2033": [
+      "Kotak Mahindra Mutual Fund"
+    ],
+    "niftygsecjul2027": [
+      "Invesco Mutual Fund"
+    ],
+    "niftygsecjun2027": [
+      "HDFC Mutual Fund"
+    ],
+    "niftygsecjun2036": [
+      "HDFC Mutual Fund",
+      "Nippon India Mutual Fund"
+    ],
+    "niftygsecoct2028": [
+      "Nippon India Mutual Fund"
+    ],
+    "niftygsecsep2032": [
+      "HDFC Mutual Fund",
+      "Invesco Mutual Fund"
+    ],
+    "niftygsecsep2027": [
+      "Nippon India Mutual Fund"
+    ],
+    "niftyindiaconsumption": [
+      "SBI Mutual Fund"
+    ],
+    "niftyindiadefence": [
+      "Aditya Birla Sun Life Mutual Fund",
+      "Motilal Oswal Mutual Fund"
+    ],
+    "niftyindiadigital": [
+      "HDFC Mutual Fund"
+    ],
+    "niftyindiamanufacturing": [
+      "Navi Mutual Fund"
+    ],
+    "niftyindiatourism": [
+      "Kotak Mahindra Mutual Fund",
+      "Tata Mutual Fund"
+    ],
+    "niftyit": [
+      "Axis Mutual Fund",
+      "Bandhan Mutual Fund",
+      "ICICI Prudential Mutual Fund",
+      "Navi Mutual Fund",
+      "Nippon India Mutual Fund"
+    ],
+    "niftylargemidcap250": [
+      "Edelweiss Mutual Fund",
+      "HDFC Mutual Fund",
+      "ICICI Prudential Mutual Fund",
+      "Mirae Asset Mutual Fund",
+      "Zerodha Mutual Fund"
+    ],
+    "niftymicrocap250": [
+      "Motilal Oswal Mutual Fund"
+    ],
+    "niftymidcap150": [
+      "Aditya Birla Sun Life Mutual Fund",
+      "Bandhan Mutual Fund",
+      "Baroda BNP Paribas Mutual Fund",
+      "HDFC Mutual Fund",
+      "ICICI Prudential Mutual Fund",
+      "Motilal Oswal Mutual Fund",
+      "Navi Mutual Fund",
+      "Nippon India Mutual Fund",
+      "SBI Mutual Fund",
+      "UTI Mutual Fund"
+    ],
+    "niftymidcap150momentum50": [
+      "Edelweiss Mutual Fund",
+      "Kotak Mahindra Mutual Fund",
+      "Tata Mutual Fund"
+    ],
+    "niftymidcap150quality50": [
+      "DSP Mutual Fund",
+      "UTI Mutual Fund"
+    ],
+    "niftymidcap50": [
+      "Axis Mutual Fund",
+      "Kotak Mahindra Mutual Fund"
+    ],
+    "niftymidsmallfinancialservices": [
+      "Motilal Oswal Mutual Fund"
+    ],
+    "niftymidsmallhealthcare": [
+      "Motilal Oswal Mutual Fund",
+      "Tata Mutual Fund"
+    ],
+    "niftymidsmallindiaconsumption": [
+      "Motilal Oswal Mutual Fund"
+    ],
+    "niftymidsmallitamptelecom": [
+      "Motilal Oswal Mutual Fund"
+    ],
+    "niftynext50": [
+      "Aditya Birla Sun Life Mutual Fund",
+      "Axis Mutual Fund",
+      "DSP Mutual Fund",
+      "Edelweiss Mutual Fund",
+      "HDFC Mutual Fund",
+      "HSBC Mutual Fund",
+      "ICICI Prudential Mutual Fund",
+      "Kotak Mahindra Mutual Fund",
+      "LIC Mutual Fund",
+      "Motilal Oswal Mutual Fund",
+      "Navi Mutual Fund",
+      "SBI Mutual Fund",
+      "UTI Mutual Fund"
+    ],
+    "niftynoncyclicalconsumer": [
+      "Groww Mutual Fund"
+    ],
+    "niftypharma": [
+      "ICICI Prudential Mutual Fund"
+    ],
+    "niftyprivatebank": [
+      "UTI Mutual Fund"
+    ],
+    "niftyrealty": [
+      "HDFC Mutual Fund",
+      "Nippon India Mutual Fund",
+      "Tata Mutual Fund"
+    ],
+    "niftypsubondplussdlapr20275050": [
+      "Edelweiss Mutual Fund"
+    ],
+    "niftypsubondplussdlsep20274060": [
+      "ICICI Prudential Mutual Fund"
+    ],
+    "niftysdlapr2027": [
+      "Aditya Birla Sun Life Mutual Fund"
+    ],
+    "niftysdlsep2026": [
+      "Axis Mutual Fund",
+      "ICICI Prudential Mutual Fund"
+    ],
+    "niftysdljul2033": [
+      "Kotak Mahindra Mutual Fund"
+    ],
+    "niftysdljul2026": [
+      "Kotak Mahindra Mutual Fund"
+    ],
+    "niftysdloct2026": [
+      "HDFC Mutual Fund"
+    ],
+    "niftysdlplusgsecjun20297030": [
+      "Nippon India Mutual Fund"
+    ],
+    "niftysdlplusaaapsubondapr20267525": [
+      "UTI Mutual Fund"
+    ],
+    "niftysdlapr2027top12equalweight": [
+      "Kotak Mahindra Mutual Fund"
+    ],
+    "niftysdlapr2032top12equalweight": [
+      "Kotak Mahindra Mutual Fund"
+    ],
+    "niftysdldec2026": [
+      "Baroda BNP Paribas Mutual Fund"
+    ],
+    "niftysdldec2028": [
+      "Baroda BNP Paribas Mutual Fund",
+      "ICICI Prudential Mutual Fund"
+    ],
+    "niftysdljun2027": [
+      "Mirae Asset Mutual Fund"
+    ],
+    "niftysdljune2028": [
+      "Mirae Asset Mutual Fund"
+    ],
+    "niftysdlplusaaapsubonddec20276040": [
+      "Tata Mutual Fund"
+    ],
+    "niftysdlplusaaapsubondjul20286040": [
+      "Kotak Mahindra Mutual Fund"
+    ],
+    "niftysdlplusgsecjun20283070": [
+      "DSP Mutual Fund"
+    ],
+    "niftysdlplusgsecjun20287030": [
+      "Nippon India Mutual Fund"
+    ],
+    "niftysdlplusgsecjun20274060": [
+      "HDFC Mutual Fund"
+    ],
+    "niftysdlplusgsecsep20275050": [
+      "DSP Mutual Fund"
+    ],
+    "niftysdlpluspsubondsep20266040": [
+      "Aditya Birla Sun Life Mutual Fund"
+    ],
+    "niftysdlsep2025": [
+      "Aditya Birla Sun Life Mutual Fund"
+    ],
+    "niftysdlsep2027": [
+      "Aditya Birla Sun Life Mutual Fund",
+      "ICICI Prudential Mutual Fund"
+    ],
+    "niftysmallcap250": [
+      "Bandhan Mutual Fund",
+      "Edelweiss Mutual Fund",
+      "Groww Mutual Fund",
+      "HDFC Mutual Fund",
+      "ICICI Prudential Mutual Fund",
+      "Kotak Mahindra Mutual Fund",
+      "Motilal Oswal Mutual Fund",
+      "Nippon India Mutual Fund",
+      "SBI Mutual Fund"
+    ],
+    "niftysmallcap250quality50": [
+      "DSP Mutual Fund"
+    ],
+    "niftysmallcap50": [
+      "Aditya Birla Sun Life Mutual Fund",
+      "Axis Mutual Fund",
+      "Kotak Mahindra Mutual Fund"
+    ],
+    "niftytop10equalweight": [
+      "DSP Mutual Fund"
+    ],
+    "niftytotalmarket": [
+      "Bandhan Mutual Fund",
+      "Groww Mutual Fund",
+      "Mirae Asset Mutual Fund"
+    ],
+    "nifty100equalweight": [
+      "HDFC Mutual Fund",
+      "Sundaram Mutual Fund"
+    ],
+    "nifty100lowvolatility30": [
+      "Bandhan Mutual Fund",
+      "HDFC Mutual Fund",
+      "Kotak Mahindra Mutual Fund"
+    ],
+    "nifty100quality30": [
+      "Edelweiss Mutual Fund"
+    ],
+    "nifty200alpha30": [
+      "Tata Mutual Fund"
+    ],
+    "nifty200momentum30": [
+      "Bandhan Mutual Fund",
+      "Baroda BNP Paribas Mutual Fund",
+      "HDFC Mutual Fund",
+      "ICICI Prudential Mutual Fund",
+      "Kotak Mahindra Mutual Fund",
+      "Motilal Oswal Mutual Fund",
+      "UTI Mutual Fund"
+    ],
+    "nifty200quality30": [
+      "Bandhan Mutual Fund",
+      "UTI Mutual Fund"
+    ],
+    "nifty200value30": [
+      "ICICI Prudential Mutual Fund"
+    ],
+    "nifty50equalweight": [
+      "Aditya Birla Sun Life Mutual Fund",
+      "DSP Mutual Fund",
+      "HDFC Mutual Fund",
+      "ICICI Prudential Mutual Fund",
+      "Kotak Mahindra Mutual Fund",
+      "SBI Mutual Fund",
+      "UTI Mutual Fund"
+    ],
+    "nifty500": [
+      "Axis Mutual Fund",
+      "ICICI Prudential Mutual Fund",
+      "Motilal Oswal Mutual Fund",
+      "SBI Mutual Fund"
+    ],
+    "niftyalpha50": [
+      "Bandhan Mutual Fund"
+    ],
+    "nifty50value20": [
+      "ICICI Prudential Mutual Fund",
+      "Nippon India Mutual Fund"
+    ],
+    "nifty500equalweight": [
+      "Nippon India Mutual Fund"
+    ],
+    "nifty500momentum50": [
+      "Bandhan Mutual Fund",
+      "Motilal Oswal Mutual Fund",
+      "Nippon India Mutual Fund"
+    ],
+    "nifty500multicap502525": [
+      "HDFC Mutual Fund",
+      "Navi Mutual Fund"
+    ],
+    "nifty500multicapindiamanufacturing503020": [
+      "Tata Mutual Fund"
+    ],
+    "nifty500multicapinfrastructure503020": [
+      "Tata Mutual Fund"
+    ],
+    "nifty500multicapmomentumquality50": [
+      "Edelweiss Mutual Fund"
+    ],
+    "nifty500value50": [
+      "Axis Mutual Fund",
+      "Bandhan Mutual Fund",
+      "UTI Mutual Fund"
+    ],
+    "niftypsubondplussdlapr20265050index": [
+      "Edelweiss Mutual Fund"
+    ]
+  }
+}

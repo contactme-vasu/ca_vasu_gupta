@@ -63,7 +63,7 @@ function render() {
   const period = state.data.periods[state.periodIndex];
   const rows = sortedRows(filteredRows(period.rows));
   renderSummary(period, rows);
-  renderTable(rows);
+  renderTable(period, rows);
   renderFooter();
 }
 
@@ -84,7 +84,7 @@ function renderMeta() {
   sourceList.innerHTML = state.data.sources.map((source) => `
     <li>
       <span>${escapeHtml(source.text)}</span>
-      <a href="${escapeHtml(source.url)}" aria-label="Open source">open</a>
+      <a href="${escapeHtml(source.url)}" aria-label="Open source">↗</a>
     </li>
   `).join("");
 }
@@ -134,10 +134,11 @@ function renderSummary(period, rows) {
   }
 }
 
-function renderTable(rows) {
+function renderTable(period, rows) {
   const tbody = document.getElementById("rankingBody");
   tbody.innerHTML = "";
   document.getElementById("rowCount").textContent = `${rows.length} rows`;
+  document.getElementById("avgRollingHeader").textContent = `Average ${period.rollingYears} Year Rolling Return (%)`;
 
   const fragment = document.createDocumentFragment();
   for (const row of rows) {
@@ -146,8 +147,19 @@ function renderTable(rows) {
       <td>${escapeHtml(row.indexName)}</td>
       <td>${formatPercent(row.cagr)}</td>
       <td>${formatPercent(row.stdDev)}</td>
+      <td>${formatPercent(row.maxDrawdown)}</td>
+      <td>${numberOrDash(row.sharpeRatio)}</td>
+      <td>${numberOrDash(row.sortinoRatio)}</td>
       <td>${numberOrDash(row.yearsOfData)}</td>
+      <td>${formatPercent(row.latest1YearReturn)}</td>
+      <td>${formatPercent(row.latest3YearReturn)}</td>
+      <td>${formatPercent(row.latest5YearReturn)}</td>
+      <td>${formatPercent(row.latest7YearReturn)}</td>
+      <td>${formatPercent(row.latest10YearReturn)}</td>
       <td>${formatPercent(row.averageRollingReturn)}</td>
+      <td>${formatPercent(row.worstRollingReturn)}</td>
+      <td>${formatPercent(row.bestRollingReturn)}</td>
+      <td>${formatPercent(row.rollingReturnStdDev)}</td>
       <td>${numberOrDash(row.topQuartileCount)}</td>
       <td>${numberOrDash(row.bottomQuartileCount)}</td>
       <td>${numberOrDash(row.topBottomRatio)}</td>

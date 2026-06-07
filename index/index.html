@@ -3,38 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex, nofollow">
     <title>Index Funds Analysis</title>
-    <link rel="icon" type="image/png" href="assets/ca-india-logo.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="../">
+    <header class="page-header">
+      <div class="brand">
         <img src="assets/ca-india-logo.png" alt="CA India logo">
-        <span class="brand-text">
-          <strong>CA Vasu Gupta</strong>
-          <span>Chartered Accountant</span>
-        </span>
-      </a>
-      <nav aria-label="Primary navigation">
-        <a href="../#profile">Profile</a>
-        <a href="../#services">Services</a>
-        <a href="../#contact">Contact</a>
-      </nav>
+        <h1>Index Funds Analysis</h1>
+      </div>
     </header>
 
     <main>
-      <section class="page-title">
-        <div>
-          <p>Capital Markets</p>
-          <h1>Index Funds Analysis</h1>
-        </div>
-        <span>Information and discussion only. Names shown are data references, not client names, endorsements, or recommendations.</span>
-      </section>
-
       <section class="toolbar" aria-label="Report controls">
         <div class="tabs" id="periodTabs"></div>
         <div class="metadata-grid" id="reportMeta"></div>
@@ -69,12 +49,32 @@
               <dd>Standard deviation: a measure of how much returns moved up and down. Higher values usually mean a bumpier ride.</dd>
             </div>
             <div>
-              <dt>Years of Data</dt>
-              <dd>Number of years of index data available in the workbook for the selected analysis period.</dd>
+              <dt>Max Drawdown</dt>
+              <dd>Maximum drawdown: the worst peak-to-trough fall in the TRI history.</dd>
+            </div>
+            <div>
+              <dt>Sharpe</dt>
+              <dd>Sharpe ratio: annualized average monthly excess return over monthly excess-return standard deviation, using 364-day T-Bill yields as the risk-free rate.</dd>
+            </div>
+            <div>
+              <dt>Sortino</dt>
+              <dd>Sortino ratio: annualized average monthly excess return over the standard deviation of negative monthly excess returns.</dd>
             </div>
             <div>
               <dt>Avg Rolling</dt>
               <dd>Average rolling return: the average of all rolling period returns, such as all 3-year or 5-year return windows.</dd>
+            </div>
+            <div>
+              <dt>Worst Rolling</dt>
+              <dd>Worst rolling return: the lowest return seen across the selected rolling windows.</dd>
+            </div>
+            <div>
+              <dt>Best Rolling</dt>
+              <dd>Best rolling return: the highest return seen across the selected rolling windows.</dd>
+            </div>
+            <div>
+              <dt>Rolling Std Dev</dt>
+              <dd>Standard deviation of rolling returns: a measure of how consistent the selected rolling-period returns were.</dd>
             </div>
             <div>
               <dt>Top Q</dt>
@@ -105,8 +105,19 @@
                 <th data-sort="indexName">Index Name</th>
                 <th data-sort="cagr">CAGR</th>
                 <th data-sort="stdDev">Std Dev</th>
+                <th data-sort="maxDrawdown">Max Drawdown</th>
+                <th data-sort="sharpeRatio">Sharpe</th>
+                <th data-sort="sortinoRatio">Sortino</th>
                 <th data-sort="yearsOfData">Years of Data</th>
-                <th data-sort="averageRollingReturn">Avg Rolling</th>
+                <th data-sort="latest1YearReturn">Latest 1 Year Return</th>
+                <th data-sort="latest3YearReturn">Latest 3 Year Return</th>
+                <th data-sort="latest5YearReturn">Latest 5 Year Return</th>
+                <th data-sort="latest7YearReturn">Latest 7 Year Return</th>
+                <th data-sort="latest10YearReturn">Latest 10 Year Return</th>
+                <th id="avgRollingHeader" data-sort="averageRollingReturn">Average Rolling Return</th>
+                <th data-sort="worstRollingReturn">Worst Rolling</th>
+                <th data-sort="bestRollingReturn">Best Rolling</th>
+                <th data-sort="rollingReturnStdDev">Rolling Std Dev</th>
                 <th data-sort="topQuartileCount">Upper Q</th>
                 <th data-sort="bottomQuartileCount">Lower Q</th>
                 <th data-sort="topBottomRatio">Upper/Lower</th>
@@ -122,9 +133,9 @@
 
     <footer>
       <span id="updatedAt"></span>
-      <span>CA Vasu Gupta. Information only. Data names are references, not clients, endorsements, or recommendations.</span>
+      <span>For information and discussion only. Data names are references, not clients, endorsements, or recommendations.</span>
     </footer>
 
-    <script src="app.js?v=20260508-1"></script>
+    <script src="app.js"></script>
   </body>
 </html>

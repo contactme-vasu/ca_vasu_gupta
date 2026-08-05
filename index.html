@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CA Vasu Gupta</title>
+  <meta name="description" content="CA Vasu Gupta & Company is a Chartered Accountant firm specializing in audit & assurance, taxation, forensic audit, financial advisory, and regulatory compliance.">
   <link rel="icon" type="image/png" href="assets/CA_India_Logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -22,7 +23,10 @@
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { 
+      scroll-behavior: smooth; 
+      scroll-padding-top: 84px; 
+    }
     body {
       margin: 0;
       background: var(--paper);
@@ -391,6 +395,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
+      margin-top: 32px;
     }
 
     .plain-link {
@@ -411,6 +416,16 @@
     .hero .plain-link {
       min-height: 48px;
       padding: 0 24px;
+      background: var(--navy);
+      color: #ffffff;
+      border-color: var(--navy);
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .hero .plain-link:hover,
+    .hero .plain-link:focus-visible {
+      background: var(--navy-dark);
+      border-color: var(--navy-dark);
     }
 
     .profile-panel {
@@ -542,7 +557,8 @@
 
     .about { background: var(--soft-blue); }
 
-    .industries {
+    .industries,
+    .contact-layout {
       display: grid;
       grid-template-columns: minmax(250px, 0.8fr) minmax(300px, 1.2fr);
       gap: 42px;
@@ -579,7 +595,7 @@
 
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 1px;
       background: rgba(255, 255, 255, 0.16);
       border: 1px solid rgba(255, 255, 255, 0.16);
@@ -610,6 +626,13 @@
       line-height: 1.55;
     }
 
+    .contact-layout .intro-text {
+      margin-top: 16px;
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
     footer {
       display: flex;
       justify-content: space-between;
@@ -624,6 +647,7 @@
       .hero-grid,
       .section-head,
       .industries,
+      .contact-layout,
       .contact-grid {
         grid-template-columns: 1fr;
       }
@@ -654,7 +678,8 @@
       .tool-grid,
       .service-grid,
       .info-grid,
-      .industry-list {
+      .industry-list,
+      .contact-grid {
         grid-template-columns: 1fr;
       }
       .hero-actions { align-items: stretch; }
@@ -673,13 +698,13 @@
         <li>The information provided does not amount to solicitation or advertising.</li>
         <li>The information is meant only for the visitor's understanding of the firm and its activities.</li>
       </ul>
-      <button type="button" onclick="document.getElementById('disclaimerModal').style.display='none'">I Acknowledge</button>
+      <button type="button" onclick="acknowledgeDisclaimer()">I Acknowledge</button>
     </div>
   </div>
 
   <header class="site-header">
     <a class="brand" href="#home">
-      <img src="assets/CA_India_Logo.png" alt="CA India logo">
+      <img src="assets/CA_India_Logo.png" alt="CA Vasu Gupta - Chartered Accountant Logo">
       <span class="brand-text">
         <strong>CA Vasu Gupta</strong>
         <span>Chartered Accountant</span>
@@ -689,7 +714,7 @@
       <ul class="nav-links">
         <li><a href="#profile">Profile</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#industries">Industries</a></li>
+        <li><a href="#industries">Sectors</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -706,7 +731,7 @@
   <div class="mobile-nav" id="mobileNav">
     <a href="#profile" onclick="closeMobileMenu()">Profile</a>
     <a href="#services" onclick="closeMobileMenu()">Services</a>
-    <a href="#industries" onclick="closeMobileMenu()">Industries</a>
+    <a href="#industries" onclick="closeMobileMenu()">Sectors</a>
     <a href="#contact" onclick="closeMobileMenu()">Contact</a>
     <button class="login-button mobile-login" type="button" onclick="openLogin()">Login</button>
   </div>
@@ -736,15 +761,14 @@
         <div class="hero-intro">
           <div class="eyebrow">Chartered Accountant</div>
           <h1>CA Vasu Gupta</h1>
-          <p class="hero-sub">Vasu Gupta and Company, practicing from Lucknow with a focus on audit, taxation, forensic accounting, and financial advisory.</p>
-          <div class="hero-actions">
+            <div class="hero-actions">
             <a class="plain-link" href="#contact">Contact Information</a>
           </div>
         </div>
         <div class="profile-panel">
-          <div class="section-label">Profile</div>
+          <div class="section-label">Firm Profile</div>
           <h2>Vasu Gupta & Company</h2>
-          <p>Vasu Gupta and Company is a Chartered Accountant firm practicing from Lucknow.</p>
+          <p>Vasu Gupta and Company is a Chartered Accountant firm.</p>
           <p><strong>CA Vasu Gupta</strong> has completed the <strong>Post Qualification Course in Information Systems Audit (ISA)</strong> from the Institute of Chartered Accountants of India (ICAI).</p>
         </div>
       </div>
@@ -778,7 +802,7 @@
           <article class="tile service-tile">
             <span class="service-number">04</span>
             <h3>Financial Advisory</h3>
-            <p>Cash flow planning, break-even analysis, CMA data, project reports, and finance-linked reporting support.</p>
+            <p>CMA data, project reports, tax loss harvesting, retirement planning, Portfolio Restructuring, and Capital Gains Structuring.</p>
           </article>
           <article class="tile service-tile">
             <span class="service-number">05</span>
@@ -797,8 +821,8 @@
     <section class="about" id="industries">
       <div class="section-inner industries">
         <div>
-          <div class="section-label">Industries</div>
-          <h2>Assignments Information</h2>
+          <div class="section-label">Sectors</div>
+          <h2>Sector Experience</h2>
         </div>
         <div class="industry-list">
           <div>Textiles & Garments</div>
@@ -814,13 +838,11 @@
     </section>
 
     <section class="contact" id="contact">
-      <div class="section-inner">
-        <div class="section-head">
-          <div>
-            <div class="section-label">Contact</div>
-            <h2>Contact Information</h2>
-          </div>
-          <p>Basic contact details are provided for visitors who specifically seek them.</p>
+      <div class="section-inner contact-layout">
+        <div>
+          <div class="section-label">Contact</div>
+          <h2>Contact Information</h2>
+          <p class="intro-text">Basic contact details are provided for visitors who specifically seek them.</p>
         </div>
         <div class="contact-grid">
           <div class="contact-card">
@@ -830,10 +852,6 @@
           <div class="contact-card">
             <span>LinkedIn</span>
             <a href="https://www.linkedin.com/in/cavasugupta" target="_blank" rel="noopener">linkedin.com/in/cavasugupta</a>
-          </div>
-          <div class="contact-card">
-            <span>Office Address</span>
-            <p>H-1106, Shalimar Gallant, Mahanagar, Lucknow, UP - 226006</p>
           </div>
         </div>
       </div>
@@ -846,6 +864,17 @@
   </footer>
 
   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      if (localStorage.getItem("disclaimerAcknowledged") === "true") {
+        document.getElementById("disclaimerModal").style.display = "none";
+      }
+    });
+
+    function acknowledgeDisclaimer() {
+      localStorage.setItem("disclaimerAcknowledged", "true");
+      document.getElementById("disclaimerModal").style.display = "none";
+    }
+
     function toggleMobileMenu() {
       document.getElementById("mobileNav").classList.toggle("open");
     }

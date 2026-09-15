@@ -3,727 +3,235 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CA Vasu Gupta</title>
-  <meta name="description" content="CA Vasu Gupta & Company is a Chartered Accountant firm specializing in audit & assurance, taxation, forensic audit, financial advisory, and regulatory compliance.">
+  <title>Vasu Gupta & Company — Chartered Accountant</title>
+  <meta name="description" content="Vasu Gupta and Company is a Chartered Accountant firm. Proprietor CA Vasu Gupta, ISA (ICAI). Audit, taxation, regulatory, forensic review, advisory and outsourced accounting. Information only.">
   <link rel="icon" type="image/png" href="assets/CA_India_Logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --navy: #1d5189;
-      --navy-dark: #14375d;
-      --orange: #e87722;
-      --green: #5cb04d;
-      --paper: #fbfaf8;
-      --panel: #ffffff;
-      --ink: #162235;
-      --muted: #687386;
-      --line: rgba(29, 81, 137, 0.16);
-      --soft-blue: #eef5fa;
+      --paper: #FAF8F3;
+      --sheet: #ffffff;
+      --ink: #1A2B3C;
+      --muted: #5A6575;
+      --ca-blue: #145886;
+      --ca-blue-deep: #0F3A5A;
+      --file-orange: #F37920;
+      --audit-green: #55B848;
+      --line: rgba(20, 88, 134, 0.22);
+      --line-soft: rgba(20, 88, 134, 0.14);
+      --max: 1180px;
     }
-
     * { box-sizing: border-box; }
-    html { 
-      scroll-behavior: smooth; 
-      scroll-padding-top: 84px; 
-    }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
     body {
       margin: 0;
       background: var(--paper);
       color: var(--ink);
-      font-family: "DM Sans", Arial, sans-serif;
-      line-height: 1.65;
-      letter-spacing: 0;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    ::selection { background: var(--ca-blue); color: #fff; }
+    :focus-visible {
+      outline: 3px solid var(--file-orange);
+      outline-offset: 3px;
+      border-radius: 1px;
     }
 
-    a { color: inherit; }
+    a { color: var(--ca-blue); text-underline-offset: 3px; }
+    a:hover { color: var(--ca-blue-deep); }
 
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      background: rgba(20, 55, 93, 0.92);
-    }
-
-    .modal {
-      width: min(720px, 100%);
-      padding: clamp(24px, 4vw, 42px);
-      background: #fff;
-      border-top: 4px solid var(--orange);
-      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
-    }
-
-    .modal h2 {
-      margin: 0 0 16px;
-      color: var(--navy);
-      font-size: 18px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .modal p,
-    .modal li {
-      color: #4b5565;
-      font-size: 14px;
-    }
-
-    .modal ul {
-      margin: 0 0 22px;
-      padding-left: 20px;
-    }
-
-    .modal button {
-      min-height: 44px;
-      padding: 0 22px;
-      border: 0;
-      background: var(--navy);
-      color: #fff;
-      cursor: pointer;
-      font: inherit;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
+    /* ---------- header : file edge ---------- */
     .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 84px;
-      padding: 12px clamp(18px, 6vw, 96px);
-      background: rgba(251, 250, 248, 0.96);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(10px);
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
-      text-decoration: none;
-    }
-
-    .brand img {
-      width: auto;
-      height: 56px;
-      display: block;
-      mix-blend-mode: multiply;
-    }
-
-    .brand-text {
-      display: grid;
-      gap: 0;
-    }
-
-    .brand-text strong {
-      color: var(--navy-dark);
-      font-size: 15px;
-      line-height: 1.2;
-    }
-
-    .brand-text span {
-      color: var(--muted);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: clamp(18px, 3vw, 38px);
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .nav-links a {
-      color: var(--ink);
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .nav-links a:hover { color: var(--navy); }
-
-    .header-actions {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .login-button {
-      min-height: 42px;
-      padding: 0 18px;
-      border: 1px solid var(--navy);
-      background: var(--navy);
-      color: #fff;
-      cursor: pointer;
-      font: inherit;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .login-button:hover,
-    .login-button:focus-visible {
-      background: var(--navy-dark);
-      border-color: var(--navy-dark);
-    }
-
-    .menu-toggle {
-      display: none;
-      width: 42px;
-      height: 42px;
-      border: 1px solid var(--line);
-      background: #fff;
-      cursor: pointer;
-    }
-
-    .menu-toggle span {
-      display: block;
-      width: 20px;
-      height: 2px;
-      margin: 5px auto;
-      background: var(--navy);
-    }
-
-    .mobile-nav {
-      display: none;
-      position: fixed;
-      top: 84px;
-      left: 0;
-      right: 0;
-      z-index: 45;
-      padding: 12px clamp(18px, 6vw, 96px) 20px;
+      position: sticky; top: 0; z-index: 50;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 20px;
+      min-height: 76px;
+      padding: 10px clamp(18px, 5vw, 56px);
       background: var(--paper);
-      border-bottom: 1px solid var(--line);
+      border-bottom: 2px solid var(--ink);
     }
-
+    .brand { display: inline-flex; align-items: center; gap: 13px; text-decoration: none; color: var(--ink); }
+    .brand img { height: 50px; width: auto; display: block; mix-blend-mode: multiply; }
+    .brand-name { display: grid; line-height: 1.2; }
+    .brand-name strong { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 18px; letter-spacing: -0.01em; }
+    .brand-name span { font-size: 13.5px; color: var(--muted); }
+    .nav-links { display: flex; align-items: center; gap: 26px; list-style: none; margin: 0; padding: 0; }
+    .nav-links a {
+      text-decoration: none; color: var(--ink);
+      font-size: 14.5px; font-weight: 500;
+      padding: 8px 2px;
+      border-bottom: 2px solid transparent;
+    }
+    .nav-links a:hover { border-bottom-color: var(--file-orange); color: var(--ink); }
+    .header-actions { display: none; align-items: center; }
+    .menu-toggle { display: none; width: 44px; height: 44px; background: #fff; border: 1.5px solid var(--ink); cursor: pointer; }
+    .menu-toggle span { display: block; width: 20px; height: 2px; margin: 5px auto; background: var(--ink); }
+    .mobile-nav { display: none; border-bottom: 2px solid var(--ink); background: var(--paper); padding: 6px clamp(18px,5vw,56px) 14px; }
     .mobile-nav.open { display: grid; }
-    .mobile-nav a {
-      padding: 12px 0;
-      border-bottom: 1px solid var(--line);
-      color: var(--ink);
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
+    .mobile-nav a { padding: 12px 0; border-bottom: 1px solid var(--line-soft); color: var(--ink); text-decoration: none; font-weight: 500; }
+
+    main { display: block; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 clamp(18px, 5vw, 56px); }
+
+    /* ---------- hero : particulars sheet ---------- */
+    .file-meta {
+      display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+      padding: 22px 0 0;
+      font-size: 13.5px; color: var(--muted);
+      font-variant-numeric: tabular-nums;
     }
-
-    .mobile-login {
-      width: 100%;
-      min-height: 44px;
-      margin-top: 12px;
-    }
-
-    .login-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 900;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      background: rgba(20, 55, 93, 0.72);
-    }
-
-    .login-overlay.open { display: flex; }
-
-    .login-dialog {
-      width: min(420px, 100%);
-      padding: 28px;
-      background: #fff;
-      border-top: 4px solid var(--orange);
-      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.25);
-    }
-
-    .login-dialog h2 {
-      margin: 0 0 20px;
-      color: var(--navy-dark);
-      font-size: 30px;
-    }
-
-    .login-field {
-      display: grid;
-      gap: 7px;
-      margin-bottom: 14px;
-    }
-
-    .login-field label {
-      color: var(--navy-dark);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .login-field input {
-      width: 100%;
-      min-height: 44px;
-      padding: 10px 12px;
-      border: 1px solid var(--line);
-      color: var(--ink);
-      font: inherit;
-      font-size: 15px;
-    }
-
-    .login-field input:focus {
-      border-color: var(--navy);
-      outline: 2px solid rgba(29, 81, 137, 0.14);
-    }
-
-    .login-error {
-      min-height: 22px;
-      margin: 2px 0 16px;
-      color: #b42318;
-      font-size: 13px;
-    }
-
-    .login-actions {
-      display: flex;
-      gap: 10px;
-      justify-content: flex-end;
-    }
-
-    .login-actions button {
-      min-height: 42px;
-      padding: 0 16px;
-      border: 1px solid var(--line);
-      background: #fff;
-      color: var(--navy-dark);
-      cursor: pointer;
-      font: inherit;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .login-actions button[type="submit"] {
-      border-color: var(--navy);
-      background: var(--navy);
-      color: #fff;
-    }
-
-    main { overflow: hidden; }
-
-    .hero {
-      padding: clamp(42px, 7vw, 84px) clamp(18px, 6vw, 96px) clamp(44px, 7vw, 80px);
-      border-bottom: 1px solid var(--line);
-      background:
-        linear-gradient(90deg, rgba(238, 245, 250, 0.95), rgba(251, 250, 248, 0.7)),
-        var(--paper);
-    }
-
+    .file-meta i { font-style: normal; border: 1px solid var(--line); padding: 3px 9px; background: #fff; }
     .hero-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: clamp(28px, 5vw, 72px);
-      align-items: stretch;
-      max-width: 1240px;
-      margin: 0 auto;
-    }
-
-    .hero-intro {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      min-height: 360px;
-      padding: clamp(22px, 4vw, 38px) 0;
-    }
-
-    .eyebrow,
-    .section-label {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      min-height: 18px;
-      margin-bottom: 18px;
-      color: var(--orange);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-    }
-
-    .eyebrow::before,
-    .section-label::before {
-      content: "";
-      width: 34px;
-      height: 2px;
-      background: var(--orange);
-    }
-
-    h1,
-    h2,
-    h3 {
-      margin: 0;
-      color: var(--navy-dark);
-      font-family: "Cormorant Garamond", Georgia, serif;
-      line-height: 1.08;
-    }
-
-    h1 {
-      max-width: 560px;
-      font-size: clamp(56px, 6.5vw, 88px);
-      font-weight: 500;
-    }
-
-    .hero-sub {
-      max-width: 560px;
-      margin: 24px 0 30px;
-      color: var(--muted);
-      font-size: clamp(17px, 1.6vw, 20px);
-      font-weight: 400;
-      line-height: 1.7;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 32px;
-    }
-
-    .plain-link {
-      display: inline-flex;
-      align-items: center;
-      min-height: 44px;
-      padding: 0 18px;
-      border: 1px solid var(--line);
-      background: #fff;
-      color: var(--navy-dark);
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .hero .plain-link {
-      min-height: 48px;
-      padding: 0 24px;
-      background: var(--navy);
-      color: #ffffff;
-      border-color: var(--navy);
-      transition: background-color 0.2s ease, border-color 0.2s ease;
-    }
-
-    .hero .plain-link:hover,
-    .hero .plain-link:focus-visible {
-      background: var(--navy-dark);
-      border-color: var(--navy-dark);
-    }
-
-    .profile-panel {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      min-height: 360px;
-      padding: clamp(22px, 4vw, 38px);
-      background: rgba(255, 255, 255, 0.82);
-      border: 1px solid var(--line);
-      border-top: 4px solid var(--green);
-    }
-
-    .profile-panel h2 {
-      margin-bottom: 24px;
-      font-size: clamp(38px, 4vw, 56px);
-      font-weight: 500;
-    }
-
-    .profile-panel p {
-      max-width: 560px;
-      margin: 0 0 18px;
-      color: #4f596a;
-      font-size: clamp(17px, 1.6vw, 20px);
-      line-height: 1.7;
-    }
-
-    .profile-panel p:last-child { margin-bottom: 0; }
-
-    section {
-      padding: clamp(44px, 7vw, 82px) clamp(18px, 6vw, 96px);
-    }
-
-    .section-inner {
-      max-width: 1240px;
-      margin: 0 auto;
-    }
-
-    .section-head {
-      display: grid;
-      grid-template-columns: minmax(260px, 0.8fr) minmax(300px, 1fr);
-      gap: 40px;
-      align-items: end;
-      margin-bottom: 30px;
-    }
-
-    .section-head h2 {
-      font-size: clamp(38px, 5vw, 64px);
-    }
-
-    .section-head p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1.65;
-    }
-
-    .tool-grid,
-    .service-grid,
-    .info-grid {
-      display: grid;
-      gap: 1px;
-      background: var(--line);
-      border: 1px solid var(--line);
-    }
-
-    .tool-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .service-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .info-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-
-    .tile {
-      min-height: 190px;
-      padding: 24px;
-      background: var(--panel);
-    }
-
-    .tile h3 {
-      margin-bottom: 12px;
-      font-size: 28px;
-    }
-
-    .tile p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-    .tool-tile {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 220px;
-      text-decoration: none;
-    }
-
-    .tool-tile span {
-      color: var(--orange);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .tool-tile:hover h3 { color: var(--navy); }
-
-    .services { background: #fff; }
-
-    .service-tile {
-      background: var(--navy);
-      border-color: rgba(255, 255, 255, 0.1);
-    }
-
-    .service-tile h3,
-    .service-tile p {
-      color: #fff;
-    }
-
-    .service-tile p { opacity: 0.76; }
-
-    .service-number {
-      display: block;
-      margin-bottom: 28px;
-      color: rgba(255, 255, 255, 0.35);
-      font-family: "Cormorant Garamond", Georgia, serif;
-      font-size: 42px;
-      line-height: 1;
-    }
-
-    .about { background: var(--soft-blue); }
-
-    .industries,
-    .contact-layout {
-      display: grid;
-      grid-template-columns: minmax(250px, 0.8fr) minmax(300px, 1.2fr);
-      gap: 42px;
+      display: grid; grid-template-columns: 1.05fr 0.95fr;
+      gap: clamp(28px, 4vw, 56px);
+      padding: 26px 0 54px;
       align-items: start;
     }
+    h1, h2, h3 { font-family: "Fraunces", Georgia, serif; color: var(--ink); line-height: 1.05; margin: 0; letter-spacing: -0.02em; }
+    h1 { font-size: clamp(46px, 5.6vw, 76px); font-weight: 500; max-width: 12ch; }
+    h1 em { font-style: italic; font-weight: 400; }
+    .amp { font-family: "Inter", system-ui, sans-serif; font-style: normal; font-weight: 400; letter-spacing: 0; }
+    .standing { margin: 20px 0 0; max-width: 44ch; font-size: 18px; line-height: 1.65; color: #33414F; }
+    .standing strong { color: var(--ink); }
+    .hero-links { display: flex; gap: 18px; margin-top: 22px; flex-wrap: wrap; }
+    .hero-links a { font-weight: 600; font-size: 15px; }
 
-    .industry-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1px;
-      background: var(--line);
-      border: 1px solid var(--line);
+    .sheet {
+      background: var(--sheet);
+      border: 1.5px solid var(--ink);
+      border-top: 5px solid var(--audit-green);
     }
-
-    .industry-list div {
-      padding: 15px 16px;
-      background: #fff;
-      color: var(--navy-dark);
-      font-size: 14px;
-      font-weight: 500;
+    .sheet-head {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 16px 22px;
+      border-bottom: 1.5px solid var(--ink);
+      font-family: "Fraunces", Georgia, serif; font-size: 20px;
     }
-
-    .contact {
-      background: var(--navy-dark);
-      color: #fff;
+    .sheet-head span:last-child { font-family: "Inter", sans-serif; font-size: 13px; color: var(--muted); }
+    dl.particulars { margin: 0; }
+    dl.particulars > div {
+      display: grid; grid-template-columns: 150px 1fr;
+      gap: 16px; padding: 13px 22px;
+      border-bottom: 1px solid var(--line-soft);
+      font-size: 15px;
     }
+    dl.particulars > div:last-child { border-bottom: 0; }
+    dl.particulars dt { color: var(--muted); font-size: 13.5px; padding-top: 2px; }
+    dl.particulars dd { margin: 0; color: var(--ink); }
+    dl.particulars dd a { word-break: break-all; }
+    .sheet-foot { padding: 14px 22px; border-top: 1.5px solid var(--ink); font-size: 13.5px; color: var(--muted); }
 
-    .contact h2,
-    .contact h3 {
-      color: #fff;
+    /* ---------- sections : ruled, left aligned ---------- */
+    section.block { border-top: 2px solid var(--ink); padding: 46px 0 52px; }
+    section.block:first-of-type { border-top: 0; }
+    .sec-grid { display: grid; grid-template-columns: 300px 1fr; gap: clamp(24px, 4vw, 64px); align-items: start; }
+    .sec-title h2 { font-size: clamp(34px, 3.6vw, 52px); font-weight: 500; }
+    .sec-title p { margin: 14px 0 0; color: var(--muted); font-size: 16px; line-height: 1.65; max-width: 32ch; }
+    .active-mark { display: inline-block; width: 44px; height: 5px; background: var(--file-orange); margin-bottom: 16px; }
+
+    .ruled { border-top: 1.5px solid var(--ink); }
+    details.row { border-bottom: 1px solid var(--line); background: transparent; }
+    details.row summary {
+      list-style: none; cursor: pointer;
+      display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: baseline;
+      padding: 18px 4px;
     }
+    details.row summary::-webkit-details-marker { display: none; }
+    details.row summary h3 { font-size: 24px; font-weight: 500; }
+    details.row summary .hint { font-size: 13.5px; color: var(--muted); white-space: nowrap; }
+    details.row summary:hover h3 { color: var(--ca-blue); }
+    details.row .body { padding: 0 4px 20px; max-width: 70ch; color: #3C4756; font-size: 15.5px; line-height: 1.7; }
+    details.row .body p { margin: 0; }
+    details.row[open] summary .hint { color: var(--ca-blue); }
 
-    .contact .section-label { color: var(--orange); }
+    .sectors { display: grid; grid-template-columns: 1fr 1fr; column-gap: 32px; border-top: 1.5px solid var(--ink); }
+    .sectors div { padding: 13px 4px; border-bottom: 1px solid var(--line-soft); font-size: 15.5px; color: var(--ink); }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1px;
-      background: rgba(255, 255, 255, 0.16);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-    }
-
-    .contact-card {
-      min-height: 132px;
-      padding: 22px;
-      background: rgba(255, 255, 255, 0.06);
-    }
-
-    .contact-card span {
-      display: block;
-      margin-bottom: 10px;
-      color: rgba(255, 255, 255, 0.55);
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .contact-card a,
-    .contact-card p {
-      margin: 0;
-      color: #fff;
-      text-decoration: none;
-      font-size: 16px;
-      line-height: 1.55;
-    }
-
-    .contact-layout .intro-text {
-      margin-top: 16px;
-      color: rgba(255, 255, 255, 0.65);
-      font-size: 16px;
-      line-height: 1.65;
-    }
+    .contact-sheet { border: 1.5px solid var(--ink); background: #fff; }
+    .contact-sheet div { display: grid; grid-template-columns: 150px 1fr; gap: 16px; padding: 16px 22px; border-bottom: 1px solid var(--line-soft); }
+    .contact-sheet div:last-child { border-bottom: 0; }
+    .contact-sheet dt { color: var(--muted); font-size: 13.5px; }
+    .contact-sheet dd { margin: 0; font-size: 16px; }
 
     footer {
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 20px clamp(18px, 6vw, 96px);
-      background: #102d4d;
-      color: rgba(255, 255, 255, 0.52);
-      font-size: 12px;
+      background: var(--ca-blue-deep); color: rgba(255,255,255,0.82);
+      padding: 22px clamp(18px, 5vw, 56px);
+      display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+      font-size: 13.5px;
     }
+    footer strong { color: #fff; font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 16px; }
 
-    @media (max-width: 980px) {
-      .hero-grid,
-      .section-head,
-      .industries,
-      .contact-layout,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-intro,
-      .profile-panel {
-        min-height: 0;
-      }
-
-      .hero-intro {
-        padding: 0;
-      }
-
-      .service-grid,
-      .info-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+    /* ---------- overlays ---------- */
+    .modal-overlay {
+      position: fixed; inset: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: center;
+      padding: 22px; background: rgba(15, 58, 90, 0.86);
     }
+    .modal {
+      width: min(620px, 100%); background: #fff;
+      border: 1.5px solid var(--ink); border-top: 5px solid var(--file-orange);
+      padding: clamp(22px, 3.5vw, 34px);
+    }
+    .modal h2 { font-size: 30px; margin-bottom: 12px; }
+    .modal p, .modal li { font-size: 14.5px; color: #435062; }
+    .modal ul { padding-left: 20px; margin: 0 0 20px; }
+    .modal button {
+      min-height: 44px; padding: 0 20px; cursor: pointer;
+      font: inherit; font-size: 14px; font-weight: 600;
+    }
+    .modal button { background: var(--ink); color: #fff; border: 1.5px solid var(--ink); }
+    .modal button:hover { background: #000; }
 
-    @media (max-width: 760px) {
-      .site-header { min-height: 74px; }
-      .brand img { height: 48px; }
-      .brand-text { display: none; }
+    @media (max-width: 960px) {
+      .hero-grid, .sec-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
-      .site-header .login-button { display: none; }
+      .header-actions { display: flex; }
       .menu-toggle { display: block; }
-      .mobile-nav { top: 74px; }
-      .tool-grid,
-      .service-grid,
-      .info-grid,
-      .industry-list,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-      .hero-actions { align-items: stretch; }
-      .plain-link { width: 100%; justify-content: center; }
+    }
+    @media (max-width: 640px) {
+      dl.particulars > div, .contact-sheet div { grid-template-columns: 1fr; gap: 4px; }
+      details.row summary { grid-template-columns: 1fr; gap: 6px; }
+      details.row summary .hint { white-space: normal; }
       footer { flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; }
     }
   </style>
 </head>
 <body>
   <div class="modal-overlay" id="disclaimerModal">
-    <div class="modal">
-      <h2>Regulatory Disclaimer</h2>
-      <p>The rules of the Institute of Chartered Accountants of India prohibit Chartered Accountants from advertising and soliciting professional work in the public domain. This website is meant only for information.</p>
-      <p>Vasu Gupta and Company does not intend to solicit clients through this website and does not take responsibility for action taken by any person based on the information posted here.</p>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="discTitle">
+      <h2 id="discTitle">Before you read further</h2>
+      <p>The Institute of Chartered Accountants of India does not permit solicitation or advertisement. This site carries information only.</p>
       <ul>
-        <li>The information provided does not amount to solicitation or advertising.</li>
-        <li>The information is meant only for the visitor's understanding of the firm and its activities.</li>
+        <li>Nothing here is an offer or invitation for professional work.</li>
+        <li>Details are for the visitor's own understanding of the firm.</li>
       </ul>
-      <button type="button" onclick="acknowledgeDisclaimer()">I Acknowledge</button>
+      <button type="button" onclick="acknowledgeDisclaimer()">I understand — show information</button>
     </div>
   </div>
 
   <header class="site-header">
     <a class="brand" href="#home">
-      <img src="assets/CA_India_Logo.png" alt="CA Vasu Gupta - Chartered Accountant Logo">
-      <span class="brand-text">
-        <strong>CA Vasu Gupta</strong>
-        <span>Chartered Accountant</span>
-      </span>
+      <img src="assets/CA_India_Logo.png" alt="CA emblem">
+      <span class="brand-name"><strong>Vasu Gupta &amp; Company</strong><span>Chartered Accountant</span></span>
     </a>
-    <nav aria-label="Primary navigation">
+    <nav aria-label="Primary">
       <ul class="nav-links">
         <li><a href="#profile">Profile</a></li>
         <li><a href="#services">Services</a></li>
-        <li><a href="#industries">Sectors</a></li>
+        <li><a href="#sectors">Sectors</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <div class="header-actions">
-      <button class="login-button" type="button" onclick="openLogin()">Login</button>
-      <button class="menu-toggle" type="button" aria-label="Toggle menu" onclick="toggleMobileMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" onclick="toggleMobileMenu(this)">
+        <span></span><span></span><span></span>
       </button>
     </div>
   </header>
@@ -731,135 +239,114 @@
   <div class="mobile-nav" id="mobileNav">
     <a href="#profile" onclick="closeMobileMenu()">Profile</a>
     <a href="#services" onclick="closeMobileMenu()">Services</a>
-    <a href="#industries" onclick="closeMobileMenu()">Sectors</a>
+    <a href="#sectors" onclick="closeMobileMenu()">Sectors</a>
     <a href="#contact" onclick="closeMobileMenu()">Contact</a>
-    <button class="login-button mobile-login" type="button" onclick="openLogin()">Login</button>
-  </div>
-
-  <div class="login-overlay" id="loginOverlay" aria-hidden="true">
-    <form class="login-dialog" id="loginForm" aria-labelledby="loginTitle">
-      <h2 id="loginTitle">Login</h2>
-      <div class="login-field">
-        <label for="loginUser">Login</label>
-        <input id="loginUser" name="loginUser" type="text" autocomplete="username" required>
-      </div>
-      <div class="login-field">
-        <label for="loginPassword">Password</label>
-        <input id="loginPassword" name="loginPassword" type="password" autocomplete="current-password" required>
-      </div>
-      <p class="login-error" id="loginError" role="alert"></p>
-      <div class="login-actions">
-        <button type="button" onclick="closeLogin()">Cancel</button>
-        <button type="submit">Open</button>
-      </div>
-    </form>
   </div>
 
   <main id="home">
-    <section class="hero" id="profile">
+    <div class="wrap" id="profile">
+      <div class="file-meta" aria-label="File reference">
+        <span>File: VG &amp; Co. / Information sheet</span>
+        <span><i>Information only — no solicitation</i></span>
+      </div>
       <div class="hero-grid">
-        <div class="hero-intro">
-          <div class="eyebrow">Chartered Accountant</div>
-          <h1>CA Vasu Gupta</h1>
-            <div class="hero-actions">
-            <a class="plain-link" href="#contact">Contact Information</a>
-          </div>
-        </div>
-        <div class="profile-panel">
-          <div class="section-label">Firm Profile</div>
-          <h2>Vasu Gupta & Company</h2>
-          <p>Vasu Gupta and Company is a Chartered Accountant firm.</p>
-          <p><strong>CA Vasu Gupta</strong> has completed the <strong>Post Qualification Course in Information Systems Audit (ISA)</strong> from the Institute of Chartered Accountants of India (ICAI).</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="services" id="services">
-      <div class="section-inner">
-        <div class="section-head">
-          <div>
-            <div class="section-label">Expertise</div>
-            <h2>Professional Services</h2>
-          </div>
-          <p>Professional services covering audit, taxation, regulatory compliance, forensic accounting, advisory, and outsourced accounting support.</p>
-        </div>
-        <div class="service-grid">
-          <article class="tile service-tile">
-            <span class="service-number">01</span>
-            <h3>Audit & Assurance</h3>
-            <p>Statutory, internal, tax, and information systems audits with attention to compliance, controls, and financial reporting.</p>
-          </article>
-          <article class="tile service-tile">
-            <span class="service-number">02</span>
-            <h3>Taxation</h3>
-            <p>Direct and indirect tax work covering income tax, GST, TDS, compliance, and assessment proceedings.</p>
-          </article>
-          <article class="tile service-tile">
-            <span class="service-number">03</span>
-            <h3>Forensic Audit</h3>
-            <p>Review of financial irregularities, fraud indicators, and supporting documentation for legal or regulatory proceedings.</p>
-          </article>
-          <article class="tile service-tile">
-            <span class="service-number">04</span>
-            <h3>Financial Advisory</h3>
-            <p>CMA data, project reports, tax loss harvesting, retirement planning, Portfolio Restructuring, and Capital Gains Structuring.</p>
-          </article>
-          <article class="tile service-tile">
-            <span class="service-number">05</span>
-            <h3>Regulatory</h3>
-            <p>ROC filings, GST certifications, NGO registration support, incorporation, annual filings, and director KYC.</p>
-          </article>
-          <article class="tile service-tile">
-            <span class="service-number">06</span>
-            <h3>Outsourced Accounting</h3>
-            <p>Bookkeeping, ledger management, bank reconciliation, expense coding, and month-end close support.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="about" id="industries">
-      <div class="section-inner industries">
         <div>
-          <div class="section-label">Sectors</div>
-          <h2>Sector Experience</h2>
+          <h1>Vasu Gupta <em><span class="amp">&amp;</span> Company</em></h1>
+          <p class="standing"><strong>Chartered Accountant practice.</strong> Proprietor <strong>CA Vasu Gupta</strong> has completed the Post Qualification Course in <strong>Information Systems Audit (ISA)</strong> from ICAI. This page states what the firm does and how to reach it — nothing more.</p>
+          <div class="hero-links">
+            <a href="#services">What the firm handles</a>
+            <a href="#contact">How to reach the firm</a>
+          </div>
         </div>
-        <div class="industry-list">
-          <div>Textiles & Garments</div>
-          <div>Liquor Trade & Retail</div>
-          <div>Petroleum & Fuel Stations</div>
-          <div>Kirana & FMCG Trading</div>
-          <div>Food & Beverage Services</div>
-          <div>Real Estate</div>
-          <div>Educational Services</div>
-          <div>Non-Profit Organizations</div>
+        <div class="sheet" aria-label="Firm particulars">
+          <div class="sheet-head"><span>Firm particulars</span></div>
+          <dl class="particulars">
+            <div><dt>Firm</dt><dd>Vasu Gupta &amp; Company, Chartered Accountant</dd></div>
+            <div><dt>Proprietor</dt><dd>CA Vasu Gupta — ISA (ICAI)</dd></div>
+            <div><dt>Handles</dt><dd>Audit &amp; assurance, taxation, regulatory filings, forensic review, advisory, outsourced accounting</dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:cavasugupta@yahoo.com">cavasugupta@yahoo.com</a></dd></div>
+            <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/cavasugupta" target="_blank" rel="noopener">linkedin.com/in/cavasugupta</a></dd></div>
+          </dl>
+          <div class="sheet-foot">Particulars as maintained in ICAI records. No client names, no fees, no claims.</div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="contact" id="contact">
-      <div class="section-inner contact-layout">
-        <div>
-          <div class="section-label">Contact</div>
-          <h2>Contact Information</h2>
-          <p class="intro-text">Basic contact details are provided for visitors who specifically seek them.</p>
-        </div>
-        <div class="contact-grid">
-          <div class="contact-card">
-            <span>Email</span>
-            <a href="mailto:cavasugupta@yahoo.com">cavasugupta@yahoo.com</a>
+    <div class="wrap">
+      <section class="block" id="services" aria-labelledby="servicesH">
+        <div class="sec-grid">
+          <div class="sec-title">
+            <span class="active-mark" aria-hidden="true"></span>
+            <h2 id="servicesH">What the firm handles</h2>
+            <p>Nature of services. Select a row for detail.</p>
           </div>
-          <div class="contact-card">
-            <span>LinkedIn</span>
-            <a href="https://www.linkedin.com/in/cavasugupta" target="_blank" rel="noopener">linkedin.com/in/cavasugupta</a>
+          <div class="ruled">
+            <details class="row" open>
+              <summary><h3>Audit <span class="amp">&amp;</span> assurance</h3><span class="hint">Select to close</span></summary>
+              <div class="body"><p>Statutory, internal, tax and information systems audits. Attention to controls, compliance and financial reporting.</p></div>
+            </details>
+            <details class="row">
+              <summary><h3>Taxation</h3><span class="hint">Select for detail</span></summary>
+              <div class="body"><p>Income tax, GST, TDS, returns, reconciliations and assessment proceedings.</p></div>
+            </details>
+            <details class="row">
+              <summary><h3>Forensic review</h3><span class="hint">Select for detail</span></summary>
+              <div class="body"><p>Review of irregularities and fraud indicators, with documentation suitable for legal or regulatory proceedings.</p></div>
+            </details>
+            <details class="row">
+              <summary><h3>Financial advisory</h3><span class="hint">Select for detail</span></summary>
+              <div class="body"><p>CMA data and project reports, capital gains structuring, portfolio restructuring, retirement and tax-loss review.</p></div>
+            </details>
+            <details class="row">
+              <summary><h3>Regulatory</h3><span class="hint">Select for detail</span></summary>
+              <div class="body"><p>Incorporation, ROC filings, annual filings, director KYC, GST certifications and NGO registration support.</p></div>
+            </details>
+            <details class="row">
+              <summary><h3>Outsourced accounting</h3><span class="hint">Select for detail</span></summary>
+              <div class="body"><p>Bookkeeping, ledgers, bank reconciliation, expense coding and month-end close support.</p></div>
+            </details>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section class="block" id="sectors" aria-labelledby="sectorsH">
+        <div class="sec-grid">
+          <div class="sec-title">
+            <span class="active-mark" aria-hidden="true"></span>
+            <h2 id="sectorsH">Where the work comes from</h2>
+            <p>Sector experience, stated plainly. No client names are listed.</p>
+          </div>
+          <div class="sectors">
+            <div>Textiles &amp; garments</div>
+            <div>Liquor trade &amp; retail</div>
+            <div>Petroleum &amp; fuel stations</div>
+            <div>Kirana &amp; FMCG trading</div>
+            <div>Food &amp; beverage services</div>
+            <div>Real estate</div>
+            <div>Educational services</div>
+            <div>Non-profit organisations</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="contact" aria-labelledby="contactH">
+        <div class="sec-grid">
+          <div class="sec-title">
+            <span class="active-mark" aria-hidden="true"></span>
+            <h2 id="contactH">How to reach the firm</h2>
+            <p>Given only for visitors who seek it. No enquiry form, no call prompt.</p>
+          </div>
+          <dl class="contact-sheet">
+            <div><dt>Email</dt><dd><a href="mailto:cavasugupta@yahoo.com">cavasugupta@yahoo.com</a></dd></div>
+            <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/cavasugupta" target="_blank" rel="noopener">linkedin.com/in/cavasugupta</a></dd></div>
+          </dl>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer>
-    <span>CA Vasu Gupta</span>
+    <strong>Vasu Gupta <span class="amp">&amp;</span> Company</strong>
     <span>Information only. No solicitation or advertisement intended.</span>
   </footer>
 
@@ -868,65 +355,25 @@
       if (localStorage.getItem("disclaimerAcknowledged") === "true") {
         document.getElementById("disclaimerModal").style.display = "none";
       }
+      document.querySelectorAll("details.row").forEach(function(d){
+        d.addEventListener("toggle", function(){
+          var h = d.querySelector(".hint");
+          if (h) h.textContent = d.open ? "Select to close" : "Select for detail";
+        });
+      });
     });
-
     function acknowledgeDisclaimer() {
       localStorage.setItem("disclaimerAcknowledged", "true");
       document.getElementById("disclaimerModal").style.display = "none";
     }
-
-    function toggleMobileMenu() {
-      document.getElementById("mobileNav").classList.toggle("open");
+    function toggleMobileMenu(btn) {
+      var nav = document.getElementById("mobileNav");
+      var open = nav.classList.toggle("open");
+      if (btn) btn.setAttribute("aria-expanded", open ? "true" : "false");
     }
-
     function closeMobileMenu() {
       document.getElementById("mobileNav").classList.remove("open");
     }
-
-    function openLogin() {
-      closeMobileMenu();
-      document.getElementById("loginOverlay").classList.add("open");
-      document.getElementById("loginOverlay").setAttribute("aria-hidden", "false");
-      document.getElementById("loginError").textContent = "";
-      document.getElementById("loginUser").focus();
-    }
-
-    function closeLogin() {
-      document.getElementById("loginOverlay").classList.remove("open");
-      document.getElementById("loginOverlay").setAttribute("aria-hidden", "true");
-      document.getElementById("loginForm").reset();
-      document.getElementById("loginError").textContent = "";
-    }
-
-    document.getElementById("loginOverlay").addEventListener("click", function(event) {
-      if (event.target === event.currentTarget) {
-        closeLogin();
-      }
-    });
-
-    document.addEventListener("keydown", function(event) {
-      if (event.key === "Escape" && document.getElementById("loginOverlay").classList.contains("open")) {
-        closeLogin();
-      }
-    });
-
-    document.getElementById("loginForm").addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      const login = document.getElementById("loginUser").value.trim().toLowerCase();
-      const password = document.getElementById("loginPassword").value.trim().toLowerCase();
-      const pages = {
-        index: "https://contactme-vasu.github.io/indian-index-funds/",
-        insurance: "https://contactme-vasu.github.io/indian-insurance/"
-      };
-
-      if (login === password && pages[login]) {
-        window.location.href = pages[login];
-        return;
-      }
-
-      document.getElementById("loginError").textContent = "Invalid login or password.";
-    });
   </script>
 </body>
 </html>

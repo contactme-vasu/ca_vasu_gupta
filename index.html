@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vasu Gupta & Company — Chartered Accountant</title>
-  <meta name="description" content="Vasu Gupta and Company is a Chartered Accountant firm. Proprietor CA Vasu Gupta, ISA (ICAI). Audit, taxation, regulatory, forensic review, advisory and outsourced accounting. Information only.">
+  <title>Vasu Gupta & Co. — Chartered Accountant</title>
+  <meta name="description" content="M/s. Vasu Gupta & Co. is a Chartered Accountant firm. Proprietor CA Vasu Gupta, ISA (ICAI). Information only.">
   <link rel="icon" type="image/png" href="assets/CA_India_Logo.png">
   <link rel="apple-touch-icon" href="assets/CA_India_Logo.png">
   <link rel="canonical" href="https://www.vasugupta.in/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.vasugupta.in/">
-  <meta property="og:title" content="Vasu Gupta & Company — Chartered Accountant">
-  <meta property="og:description" content="Vasu Gupta and Company is a Chartered Accountant firm. Proprietor CA Vasu Gupta, ISA (ICAI). Information only.">
+  <meta property="og:title" content="Vasu Gupta & Co. — Chartered Accountant">
+  <meta property="og:description" content="M/s. Vasu Gupta & Co. is a Chartered Accountant firm. Proprietor CA Vasu Gupta, ISA (ICAI). Information only.">
   <meta property="og:image" content="https://www.vasugupta.in/assets/CA_India_Logo.png">
   <meta name="twitter:card" content="summary">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "Vasu Gupta & Company",
+    "name": "M/s. Vasu Gupta & Co.",
     "url": "https://www.vasugupta.in/",
     "email": "mailto:cavasugupta@yahoo.com",
     "founder": {
@@ -30,12 +30,12 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <style>
     :root {
-      --paper: #FAF8F3;
-      --sheet: #ffffff;
-      --ink: #1A2B3C;
+      --paper: #FFFFFF;
+      --sheet: #EFF3F6;
+      --ink: #102A43;
       --muted: #5A6575;
       --ca-blue: #145886;
       --ca-blue-deep: #0F3A5A;
@@ -43,6 +43,7 @@
       --audit-green: #55B848;
       --line: rgba(20, 88, 134, 0.22);
       --line-soft: rgba(20, 88, 134, 0.14);
+      --sheet-border: 1.5px solid var(--ink);
       --max: 1180px;
     }
     * { box-sizing: border-box; }
@@ -51,7 +52,7 @@
       margin: 0;
       background: var(--paper);
       color: var(--ink);
-      font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-family: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
       font-size: 16px;
       line-height: 1.6;
     }
@@ -81,17 +82,20 @@
     /* ---------- header : file edge ---------- */
     .site-header {
       position: sticky; top: 0; z-index: 50;
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 20px;
-      min-height: 76px;
-      padding: 10px clamp(18px, 5vw, 56px);
       background: var(--paper);
       border-bottom: 2px solid var(--ink);
+      padding: 10px 0;
+    }
+    .bar-inner {
+      max-width: var(--max); margin: 0 auto;
+      padding: 0 clamp(18px, 5vw, 56px);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 20px; min-height: 56px;
     }
     .brand { display: inline-flex; align-items: center; gap: 13px; text-decoration: none; color: var(--ink); }
-    .brand img { height: 50px; width: auto; display: block; mix-blend-mode: multiply; }
+    .brand img { height: 50px; width: auto; display: block; }
     .brand-name { display: grid; line-height: 1.2; }
-    .brand-name strong { font-family: "Fraunces", Georgia, serif; font-weight: 600; font-size: 18px; letter-spacing: -0.01em; }
+    .brand-name strong { font-family: "IBM Plex Serif", Georgia, serif; font-weight: 600; font-size: 18px; letter-spacing: -0.01em; }
     .brand-name span { font-size: 13.5px; color: var(--muted); }
     .nav-links { display: flex; align-items: center; gap: 26px; list-style: none; margin: 0; padding: 0; }
     .nav-links a {
@@ -104,48 +108,42 @@
     .header-actions { display: none; align-items: center; }
     .menu-toggle { display: none; width: 44px; height: 44px; background: #fff; border: 1.5px solid var(--ink); cursor: pointer; }
     .menu-toggle span { display: block; width: 20px; height: 2px; margin: 5px auto; background: var(--ink); }
-    .mobile-nav { display: none; border-bottom: 2px solid var(--ink); background: var(--paper); padding: 6px clamp(18px,5vw,56px) 14px; }
-    .mobile-nav.open { display: grid; }
+    .mobile-nav { display: none; border-bottom: 2px solid var(--ink); background: var(--paper); padding: 0; }
+    .mobile-nav.open { display: block; }
+    .mobile-nav-inner { max-width: var(--max); margin: 0 auto; padding: 6px clamp(18px,5vw,56px) 14px; display: grid; }
     .mobile-nav a { padding: 12px 0; border-bottom: 1px solid var(--line-soft); color: var(--ink); text-decoration: none; font-weight: 500; }
 
     main { display: block; }
     .wrap { max-width: var(--max); margin: 0 auto; padding: 0 clamp(18px, 5vw, 56px); }
 
     /* ---------- hero : particulars sheet ---------- */
-    .file-meta {
-      display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
-      padding: 22px 0 0;
-      font-size: 13.5px; color: var(--muted);
-      font-variant-numeric: tabular-nums;
-    }
     .hero-grid {
       display: grid; grid-template-columns: 1.05fr 0.95fr;
       gap: clamp(28px, 4vw, 56px);
-      padding: 26px 0 54px;
+      padding: 22px 0 40px;
       align-items: start;
     }
-    h1, h2, h3 { font-family: "Fraunces", Georgia, serif; color: var(--ink); line-height: 1.05; margin: 0; letter-spacing: -0.02em; }
+    h1, h2, h3 { font-family: "IBM Plex Serif", Georgia, serif; color: var(--ink); line-height: 1.15; margin: 0; letter-spacing: -0.02em; }
     h1 { font-size: clamp(46px, 5.6vw, 76px); font-weight: 500; max-width: 12ch; }
-    h1 em { font-style: italic; font-weight: 400; }
-    .amp { font-family: "Inter", system-ui, sans-serif; font-style: normal; font-weight: 400; letter-spacing: 0; }
     .standing { margin: 20px 0 0; max-width: 44ch; font-size: 18px; line-height: 1.65; color: #33414F; }
     .standing strong { color: var(--ink); }
-    .hero-links { display: flex; gap: 18px; margin-top: 22px; flex-wrap: wrap; }
-    .hero-links a { font-weight: 600; font-size: 15px; }
+    .profile-heading { display: grid; grid-template-columns: 128px minmax(0, 1fr); align-items: center; gap: 22px; }
+    .profile-heading h1 { font-size: clamp(40px, 4vw, 56px); }
+    .proprietor-portrait { width: 100%; margin: 0; }
+    .proprietor-portrait img { display: block; width: 100%; height: auto; border: var(--sheet-border); }
 
     .sheet {
       background: var(--sheet);
-      border: 1.5px solid var(--ink);
+      border: var(--sheet-border);
       border-top: 5px solid var(--audit-green);
     }
     .sheet-head {
       display: flex; justify-content: space-between; align-items: baseline;
       padding: 16px 22px;
       border-bottom: 1.5px solid var(--ink);
-      font-family: "Fraunces", Georgia, serif; font-size: 20px;
+      font-family: "IBM Plex Serif", Georgia, serif; font-size: 20px;
     }
-    .sheet-head span:last-child { font-family: "Inter", sans-serif; font-size: 13px; color: var(--muted); }
-    dl.particulars { margin: 0; }
+    dl.particulars { margin: 0; font-variant-numeric: tabular-nums; }
     dl.particulars > div {
       display: grid; grid-template-columns: 150px 1fr;
       gap: 16px; padding: 13px 22px;
@@ -155,35 +153,33 @@
     dl.particulars > div:last-child { border-bottom: 0; }
     dl.particulars dt { color: var(--muted); font-size: 13.5px; padding-top: 2px; }
     dl.particulars dd { margin: 0; color: var(--ink); }
-    dl.particulars dd a { word-break: break-all; }
+    dl.particulars dd a, .contact-sheet dd a { overflow-wrap: anywhere; }
 
     /* ---------- sections : ruled, left aligned ---------- */
-    section.block { border-top: 2px solid var(--ink); padding: 46px 0 52px; }
-    section.block:first-of-type { border-top: 0; }
+    section.block { border-top: 2px solid var(--ink); padding: 36px 0 40px; }
     .sec-grid { display: grid; grid-template-columns: 300px 1fr; gap: clamp(24px, 4vw, 64px); align-items: start; }
-    .sec-title h2 { font-size: clamp(34px, 3.6vw, 52px); font-weight: 500; }
+    .sec-title h2 { font-size: clamp(32px, 3vw, 40px); font-weight: 500; }
     .sec-title p { margin: 14px 0 0; color: var(--muted); font-size: 16px; line-height: 1.65; max-width: 32ch; }
-    .active-mark { display: inline-block; width: 44px; height: 5px; background: var(--file-orange); margin-bottom: 16px; }
 
     .ruled { border-top: 1.5px solid var(--ink); }
     details.row { border-bottom: 1px solid var(--line); background: transparent; }
     details.row summary {
       list-style: none; cursor: pointer;
-      display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: baseline;
-      padding: 18px 4px;
+      display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center;
+      padding: 16px 4px;
     }
     details.row summary::-webkit-details-marker { display: none; }
     details.row summary h3 { font-size: 24px; font-weight: 500; }
-    details.row summary .hint { font-size: 13.5px; color: var(--muted); white-space: nowrap; }
+    details.row summary .icon { font-size: 22px; line-height: 1; color: var(--ca-blue); width: 24px; text-align: center; font-weight: 400; user-select: none; }
     details.row summary:hover h3 { color: var(--ca-blue); }
-    details.row .body { padding: 0 4px 20px; max-width: 70ch; color: #3C4756; font-size: 15.5px; line-height: 1.7; }
+    details.row .body { padding: 0 4px 20px; max-width: 68ch; color: #3C4756; font-size: 15.5px; line-height: 1.7; }
     details.row .body p { margin: 0; }
-    details.row[open] summary .hint { color: var(--ca-blue); }
+    details.row[open] summary .icon { color: var(--ca-blue-deep); }
 
     .sectors { display: grid; grid-template-columns: 1fr 1fr; column-gap: 32px; border-top: 1.5px solid var(--ink); }
     .sectors div { padding: 13px 4px; border-bottom: 1px solid var(--line-soft); font-size: 15.5px; color: var(--ink); }
 
-    .contact-sheet { border: 1.5px solid var(--ink); background: #fff; }
+    .contact-sheet { margin: 0; border: var(--sheet-border); background: var(--paper); font-variant-numeric: tabular-nums; }
     .contact-sheet div { display: grid; grid-template-columns: 150px 1fr; gap: 16px; padding: 16px 22px; border-bottom: 1px solid var(--line-soft); }
     .contact-sheet div:last-child { border-bottom: 0; }
     .contact-sheet dt { color: var(--muted); font-size: 13.5px; }
@@ -191,33 +187,31 @@
 
     footer {
       background: var(--ca-blue-deep); color: rgba(255,255,255,0.82);
-      padding: 22px clamp(18px, 5vw, 56px);
-      display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+      padding: 22px 0;
       font-size: 13.5px;
     }
-    footer strong { color: #fff; font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 16px; }
+    .footer-inner {
+      max-width: var(--max); margin: 0 auto;
+      padding: 0 clamp(18px, 5vw, 56px);
+      display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+    }
+    footer strong { color: #fff; font-family: "IBM Plex Serif", Georgia, serif; font-weight: 500; font-size: 16px; }
 
-    /* ---------- overlays ---------- */
-    .modal-overlay {
-      position: fixed; inset: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: center;
-      padding: 22px; background: rgba(15, 58, 90, 0.86);
+    /* ---------- information-only notice ---------- */
+    .notice-bar {
+      border-bottom: 1.5px solid var(--ink);
+      background: #fff;
+      color: #435062;
+      font-size: 13.5px;
+      line-height: 1.6;
+      padding: 10px clamp(18px, 5vw, 56px);
+      text-align: left;
     }
-    .modal {
-      width: min(620px, 100%); background: #fff;
-      border: 1.5px solid var(--ink); border-top: 5px solid var(--file-orange);
-      padding: clamp(22px, 3.5vw, 34px);
-    }
-    .modal h2 { font-size: 30px; margin-bottom: 12px; }
-    .modal p, .modal li { font-size: 14.5px; color: #435062; }
-    .modal ul { padding-left: 20px; margin: 0 0 20px; }
-    .modal button {
-      min-height: 44px; padding: 0 20px; cursor: pointer;
-      font: inherit; font-size: 14px; font-weight: 600;
-    }
-    .modal button { background: var(--ink); color: #fff; border: 1.5px solid var(--ink); }
-    .modal button:hover { background: #000; }
 
+    @media (min-width: 961px) {
+      #services .sec-title { position: sticky; top: 104px; }
+      .mobile-nav.open { display: none; }
+    }
     @media (max-width: 960px) {
       .hero-grid, .sec-grid { grid-template-columns: 1fr; }
       .nav-links { display: none; }
@@ -225,10 +219,14 @@
       .menu-toggle { display: block; }
     }
     @media (max-width: 640px) {
+      .bar-inner { gap: 12px; }
+      .brand { gap: 8px; }
+      .brand-name strong { font-size: 16px; }
+      .profile-heading { grid-template-columns: 88px minmax(0, 1fr); gap: 16px; }
+      .profile-heading h1 { font-size: clamp(30px, 8vw, 46px); }
       dl.particulars > div, .contact-sheet div { grid-template-columns: 1fr; gap: 4px; }
-      details.row summary { grid-template-columns: 1fr; gap: 6px; }
-      details.row summary .hint { white-space: normal; }
-      footer { flex-direction: column; }
+      details.row summary { grid-template-columns: 1fr auto; gap: 6px; }
+      .footer-inner { flex-direction: column; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -238,22 +236,13 @@
 </head>
 <body>
   <a class="skip-link" href="#home">Skip to content</a>
-  <div class="modal-overlay" id="disclaimerModal">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="discTitle">
-      <h2 id="discTitle">Before you read further</h2>
-      <p>The Institute of Chartered Accountants of India does not permit solicitation or advertisement. This site carries information only.</p>
-      <ul>
-        <li>Nothing here is an offer or invitation for professional work.</li>
-        <li>Details are for the visitor's own understanding of the firm.</li>
-      </ul>
-      <button type="button" onclick="acknowledgeDisclaimer()">I understand — show information</button>
-    </div>
-  </div>
+  <div class="notice-bar" role="note">Information only. No solicitation or advertisement intended. Nothing here is an offer or invitation for professional work.</div>
 
   <header class="site-header">
+    <div class="bar-inner">
     <a class="brand" href="#home">
       <img src="assets/CA_India_Logo.png" alt="CA emblem">
-      <span class="brand-name"><strong>Vasu Gupta &amp; Company</strong><span>Chartered Accountant</span></span>
+      <span class="brand-name"><strong>Vasu Gupta &amp; Co.</strong><span>Chartered Accountant</span></span>
     </a>
     <nav aria-label="Primary">
       <ul class="nav-links">
@@ -264,39 +253,40 @@
       </ul>
     </nav>
     <div class="header-actions">
-      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" onclick="toggleMobileMenu(this)">
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav" onclick="toggleMobileMenu(this)">
         <span></span><span></span><span></span>
       </button>
+    </div>
     </div>
   </header>
 
   <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-inner">
     <a href="#profile" onclick="closeMobileMenu()">Profile</a>
     <a href="#services" onclick="closeMobileMenu()">Services</a>
     <a href="#sectors" onclick="closeMobileMenu()">Sectors</a>
     <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    </div>
   </div>
 
   <main id="home">
     <div class="wrap" id="profile">
-      <div class="file-meta" aria-label="File reference">
-        <span>File: VG &amp; Co. / Information sheet</span>
-      </div>
       <div class="hero-grid">
         <div>
-          <h1>Vasu Gupta <em><span class="amp">&amp;</span> Company</em></h1>
-          <p class="standing"><strong>Chartered Accountant practice.</strong> Proprietor <strong>CA Vasu Gupta</strong> has completed the Post Qualification Course in <strong>Information Systems Audit (ISA)</strong> from ICAI.</p>
-          <div class="hero-links">
-            <a href="#services">What the firm handles</a>
-            <a href="#contact">How to reach the firm</a>
+          <div class="profile-heading">
+            <figure class="proprietor-portrait">
+              <img src="assets/ca-vasu-gupta-800.jpg" alt="CA Vasu Gupta" width="800" height="1000">
+            </figure>
+            <h1>Vasu Gupta<br>&amp; Co.</h1>
           </div>
+          <p class="standing"><strong>Chartered Accountancy Practice</strong><br>Proprietor: CA Vasu Gupta, qualified in 2023.<br>Post Qualification Course in Information Systems Audit (ISA), Institute of Chartered Accountants of India (ICAI).</p>
         </div>
         <div class="sheet" aria-label="Firm particulars">
           <div class="sheet-head"><span>Firm particulars</span></div>
           <dl class="particulars">
-            <div><dt>Firm</dt><dd>Vasu Gupta &amp; Company, Chartered Accountant</dd></div>
-            <div><dt>Proprietor</dt><dd>CA Vasu Gupta — ISA (ICAI)</dd></div>
-            <div><dt>Handles</dt><dd>Audit &amp; assurance, taxation, regulatory filings, forensic review, advisory, outsourced accounting</dd></div>
+            <div><dt>Firm</dt><dd>M/s. Vasu Gupta &amp; Co., Chartered Accountant</dd></div>
+            <div><dt>Year of establishment</dt><dd>2024</dd></div>
+            <div><dt>Mobile</dt><dd><a href="tel:+919450174288">+91 94501 74288</a></dd></div>
             <div><dt>Email</dt><dd><a href="mailto:cavasugupta@yahoo.com">cavasugupta@yahoo.com</a></dd></div>
             <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/cavasugupta" target="_blank" rel="noopener noreferrer">linkedin.com/in/cavasugupta</a></dd></div>
           </dl>
@@ -308,33 +298,32 @@
       <section class="block" id="services" aria-labelledby="servicesH">
         <div class="sec-grid">
           <div class="sec-title">
-            <span class="active-mark" aria-hidden="true"></span>
-            <h2 id="servicesH">What the firm handles</h2>
-            <p>Nature of services. Select a row for detail.</p>
+            <h2 id="servicesH">Services</h2>
+            <p>Select a service to read what it covers.</p>
           </div>
           <div class="ruled">
-            <details class="row" open>
-              <summary><h3>Audit <span class="amp">&amp;</span> assurance</h3><span class="hint">Select to close</span></summary>
+            <details class="row">
+              <summary><h3>Audit &amp; assurance</h3><span class="icon" aria-hidden="true">+</span></summary>
               <div class="body"><p>Statutory, internal, tax and information systems audits. Attention to controls, compliance and financial reporting.</p></div>
             </details>
             <details class="row">
-              <summary><h3>Taxation</h3><span class="hint">Select for detail</span></summary>
+              <summary><h3>Taxation</h3><span class="icon" aria-hidden="true">+</span></summary>
               <div class="body"><p>Income tax, GST, TDS, returns, reconciliations and assessment proceedings.</p></div>
             </details>
             <details class="row">
-              <summary><h3>Forensic review</h3><span class="hint">Select for detail</span></summary>
+              <summary><h3>Forensic review</h3><span class="icon" aria-hidden="true">+</span></summary>
               <div class="body"><p>Review of irregularities and fraud indicators, with documentation suitable for legal or regulatory proceedings.</p></div>
             </details>
             <details class="row">
-              <summary><h3>Financial advisory</h3><span class="hint">Select for detail</span></summary>
+              <summary><h3>Financial advisory</h3><span class="icon" aria-hidden="true">+</span></summary>
               <div class="body"><p>CMA data and project reports, capital gains structuring, portfolio restructuring, retirement and tax-loss review.</p></div>
             </details>
             <details class="row">
-              <summary><h3>Regulatory</h3><span class="hint">Select for detail</span></summary>
+              <summary><h3>Regulatory</h3><span class="icon" aria-hidden="true">+</span></summary>
               <div class="body"><p>Incorporation, ROC filings, annual filings, director KYC, GST certifications and NGO registration support.</p></div>
             </details>
             <details class="row">
-              <summary><h3>Outsourced accounting</h3><span class="hint">Select for detail</span></summary>
+              <summary><h3>Outsourced accounting</h3><span class="icon" aria-hidden="true">+</span></summary>
               <div class="body"><p>Bookkeeping, ledgers, bank reconciliation, expense coding and month-end close support.</p></div>
             </details>
           </div>
@@ -344,8 +333,7 @@
       <section class="block" id="sectors" aria-labelledby="sectorsH">
         <div class="sec-grid">
           <div class="sec-title">
-            <span class="active-mark" aria-hidden="true"></span>
-            <h2 id="sectorsH">Where the work comes from</h2>
+            <h2 id="sectorsH">Sector experience</h2>
             <p>Sectors the firm has worked with.</p>
           </div>
           <div class="sectors">
@@ -364,11 +352,10 @@
       <section class="block" id="contact" aria-labelledby="contactH">
         <div class="sec-grid">
           <div class="sec-title">
-            <span class="active-mark" aria-hidden="true"></span>
-            <h2 id="contactH">How to reach the firm</h2>
-            <p>For visitors who seek it.</p>
+            <h2 id="contactH">Contact</h2>
           </div>
           <dl class="contact-sheet">
+            <div><dt>Mobile</dt><dd><a href="tel:+919450174288">+91 94501 74288</a></dd></div>
             <div><dt>Email</dt><dd><a href="mailto:cavasugupta@yahoo.com">cavasugupta@yahoo.com</a></dd></div>
             <div><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/cavasugupta" target="_blank" rel="noopener noreferrer">linkedin.com/in/cavasugupta</a></dd></div>
           </dl>
@@ -378,33 +365,34 @@
   </main>
 
   <footer>
-    <strong>Vasu Gupta <span class="amp">&amp;</span> Company</strong>
+    <div class="footer-inner">
+    <strong>M/s. Vasu Gupta &amp; Co.</strong>
     <span>Information only. No solicitation or advertisement intended.</span>
+    </div>
   </footer>
 
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      if (localStorage.getItem("disclaimerAcknowledged") === "true") {
-        document.getElementById("disclaimerModal").style.display = "none";
-      }
       document.querySelectorAll("details.row").forEach(function(d){
         d.addEventListener("toggle", function(){
-          var h = d.querySelector(".hint");
-          if (h) h.textContent = d.open ? "Select to close" : "Select for detail";
+          var h = d.querySelector(".icon");
+          if (h) h.textContent = d.open ? "\u2212" : "+";
         });
       });
     });
-    function acknowledgeDisclaimer() {
-      localStorage.setItem("disclaimerAcknowledged", "true");
-      document.getElementById("disclaimerModal").style.display = "none";
-    }
     function toggleMobileMenu(btn) {
       var nav = document.getElementById("mobileNav");
       var open = nav.classList.toggle("open");
-      if (btn) btn.setAttribute("aria-expanded", open ? "true" : "false");
+      if (btn) {
+        btn.setAttribute("aria-expanded", String(open));
+        btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      }
     }
     function closeMobileMenu() {
       document.getElementById("mobileNav").classList.remove("open");
+      var btn = document.querySelector(".menu-toggle");
+      btn.setAttribute("aria-expanded", "false");
+      btn.setAttribute("aria-label", "Open menu");
     }
   </script>
 </body>

@@ -8,6 +8,8 @@
   <link rel="icon" type="image/png" href="assets/CA_India_Logo.png">
   <link rel="apple-touch-icon" href="assets/CA_India_Logo.png">
   <link rel="canonical" href="https://www.vasugupta.in/">
+  <link rel="alternate" type="text/markdown" href="https://www.vasugupta.in/index.md">
+  <link rel="sitemap" type="application/xml" href="https://www.vasugupta.in/sitemap.xml">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.vasugupta.in/">
   <meta property="og:title" content="Vasu Gupta & Co. — Chartered Accountant">
@@ -17,15 +19,78 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "M/s. Vasu Gupta & Co.",
-    "url": "https://www.vasugupta.in/",
-    "email": "mailto:cavasugupta@yahoo.com",
-    "founder": {
-      "@type": "Person",
-      "name": "CA Vasu Gupta",
-      "jobTitle": "Chartered Accountant"
-    }
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.vasugupta.in/#firm",
+        "name": "M/s. Vasu Gupta & Co.",
+        "description": "Information-only website of M/s. Vasu Gupta & Co., Chartered Accountants, established 2024. Proprietor CA Vasu Gupta (qualified 2023, ISA ICAI). Audit and assurance, taxation, forensic review, financial advisory, regulatory and outsourced accounting.",
+        "url": "https://www.vasugupta.in/",
+        "email": "mailto:cavasugupta@yahoo.com",
+        "telephone": "+91 94501 74288",
+        "foundingDate": "2024",
+        "sameAs": ["https://www.linkedin.com/in/cavasugupta"],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "IN"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91 94501 74288",
+          "email": "cavasugupta@yahoo.com",
+          "contactType": "general"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "CA Vasu Gupta",
+          "jobTitle": "Chartered Accountant",
+          "description": "Proprietor of M/s. Vasu Gupta & Co., qualified 2023; Post Qualification Course in Information Systems Audit (ISA), ICAI.",
+          "sameAs": ["https://www.linkedin.com/in/cavasugupta"]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.vasugupta.in/#website",
+        "name": "Vasu Gupta & Co. — Chartered Accountant",
+        "url": "https://www.vasugupta.in/"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.vasugupta.in/#services-faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What does Audit & assurance cover?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Statutory, internal, tax and information systems audits. Attention to controls, compliance and financial reporting." }
+          },
+          {
+            "@type": "Question",
+            "name": "What does Taxation cover?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Income tax, GST, TDS, returns, reconciliations and assessment proceedings." }
+          },
+          {
+            "@type": "Question",
+            "name": "What does Forensic review cover?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Review of irregularities and fraud indicators, with documentation suitable for legal or regulatory proceedings." }
+          },
+          {
+            "@type": "Question",
+            "name": "What does Financial advisory cover?",
+            "acceptedAnswer": { "@type": "Answer", "text": "CMA data and project reports, capital gains structuring, portfolio restructuring, retirement planning and tax-loss harvesting review." }
+          },
+          {
+            "@type": "Question",
+            "name": "What does Regulatory cover?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Incorporation, ROC filings, annual filings, director KYC, GST certifications and NGO registration support." }
+          },
+          {
+            "@type": "Question",
+            "name": "What does Outsourced accounting cover?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Bookkeeping, ledgers, bank reconciliation, expense coding and month-end close support." }
+          }
+        ]
+      }
+    ]
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -367,6 +432,13 @@
   <footer>
     <div class="footer-inner">
     <strong>M/s. Vasu Gupta &amp; Co.</strong>
+    <nav aria-label="Site" style="display:flex;gap:14px;flex-wrap:wrap;">
+      <a href="https://www.vasugupta.in/about/" style="color:rgba(255,255,255,0.82);">About</a>
+      <a href="https://www.vasugupta.in/contact/" style="color:rgba(255,255,255,0.82);">Contact</a>
+      <a href="https://www.vasugupta.in/privacy/" style="color:rgba(255,255,255,0.82);">Privacy</a>
+      <a href="https://www.vasugupta.in/sitemap.xml" style="color:rgba(255,255,255,0.82);">Sitemap</a>
+      <a href="https://www.vasugupta.in/index.md" style="color:rgba(255,255,255,0.82);">Markdown</a>
+    </nav>
     <span>Information only. No solicitation or advertisement intended.</span>
     </div>
   </footer>

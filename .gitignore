@@ -1,2 +1,13 @@
 __pycache__/
 .tmp_insurance_handbook/
+
+# AI agent & tooling files (not needed for website)
+.agents/
+.claude/
+.pi/
+.codex/
+AGENTS.md
+CONTEXT.md
+docs/
+skills-lock.json
+.well-known/

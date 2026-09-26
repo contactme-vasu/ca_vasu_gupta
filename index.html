@@ -188,9 +188,9 @@
       padding: 22px 0 40px;
       align-items: start;
     }
-    h1, h2, h3 { font-family: "IBM Plex Serif", Georgia, serif; color: var(--ink); line-height: 1.15; margin: 0; letter-spacing: -0.02em; }
+    h1, h2, h3 { font-family: "IBM Plex Serif", Georgia, serif; color: var(--ink); line-height: 1.15; margin: 0; letter-spacing: -0.02em; text-wrap: balance; }
     h1 { font-size: clamp(46px, 5.6vw, 76px); font-weight: 500; max-width: 12ch; }
-    .standing { margin: 20px 0 0; max-width: 44ch; font-size: 18px; line-height: 1.65; color: #33414F; }
+    .standing { margin: 20px 0 0; max-width: 44ch; font-size: 18px; line-height: 1.65; color: #33414F; text-wrap: pretty; hyphens: manual; orphans: 3; widows: 3; }
     .standing strong { color: var(--ink); }
     .profile-heading { display: grid; grid-template-columns: 128px minmax(0, 1fr); align-items: center; gap: 22px; }
     .profile-heading h1 { font-size: clamp(40px, 4vw, 56px); }
@@ -238,7 +238,7 @@
     details.row summary .icon { font-size: 22px; line-height: 1; color: var(--ca-blue); width: 24px; text-align: center; font-weight: 400; user-select: none; }
     details.row summary:hover h3 { color: var(--ca-blue); }
     details.row .body { padding: 0 4px 20px; max-width: 68ch; color: #3C4756; font-size: 15.5px; line-height: 1.7; }
-    details.row .body p { margin: 0; }
+    details.row .body p { margin: 0; text-wrap: pretty; hyphens: manual; orphans: 3; widows: 3; }
     details.row[open] summary .icon { color: var(--ca-blue-deep); }
 
     .sectors { display: grid; grid-template-columns: 1fr 1fr; column-gap: 32px; border-top: 1.5px solid var(--ink); }
